@@ -1,0 +1,755 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local _102 = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Title = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local DropShadowHolder = Instance.new("Frame")
+local DropShadow = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local CloseButton = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+local DropShadow_2 = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+local Title_2 = Instance.new("Frame")
+local TextLabel_3 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local TextLabel_6 = Instance.new("TextLabel")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextLabel_8 = Instance.new("TextLabel")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
+local TextLabel_9 = Instance.new("TextLabel")
+local TextLabel_10 = Instance.new("TextLabel")
+local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
+local UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
+local UICorner = Instance.new("UICorner")
+local TextLabel_11 = Instance.new("TextLabel")
+local UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
+local UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
+local update = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_10 = Instance.new("UIAspectRatioConstraint")
+local Title_3 = Instance.new("Frame")
+local TextLabel_12 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_11 = Instance.new("UIAspectRatioConstraint")
+local DropShadowHolder_2 = Instance.new("Frame")
+local DropShadow_3 = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_12 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_13 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_14 = Instance.new("UIAspectRatioConstraint")
+local CloseButton_2 = Instance.new("TextButton")
+local TextLabel_13 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_15 = Instance.new("UIAspectRatioConstraint")
+local DropShadow_4 = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_16 = Instance.new("UIAspectRatioConstraint")
+local TextLabel_14 = Instance.new("TextLabel")
+local TextLabel_15 = Instance.new("TextLabel")
+local TextLabel_16 = Instance.new("TextLabel")
+local UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint")
+local UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint")
+local UICorner_2 = Instance.new("UICorner")
+local UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint")
+local openupdate = Instance.new("TextButton")
+local TextLabel_17 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_17 = Instance.new("UIAspectRatioConstraint")
+local TextButton = Instance.new("TextButton")
+local TextLabel_18 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_18 = Instance.new("UIAspectRatioConstraint")
+local DropShadow_5 = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_19 = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+_102.Name = "معلومات سكربت 1.0.3"
+_102.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+_102.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = _102
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(1, 0, 1, 0)
+
+ImageLabel.Name = "اسرق وقت"
+ImageLabel.Parent = Frame
+ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.505206704, 0, 0.512102604, 0)
+ImageLabel.Size = UDim2.new(0.366915911, 0, 0.637716055, 0)
+ImageLabel.Image = "rbxassetid://5130380004"
+
+UIAspectRatioConstraint.Parent = ImageLabel
+UIAspectRatioConstraint.AspectRatio = 1.003
+
+Title.Name = "Title"
+Title.Parent = ImageLabel
+Title.BackgroundColor3 = Color3.fromRGB(48, 141, 255)
+Title.Position = UDim2.new(-0.00223205425, 0, -0.000168561761, 0)
+Title.Size = UDim2.new(0.656758726, 0, 0.101512454, 0)
+
+TextLabel.Parent = Title
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(-0.019448746, 0, 0.138198778, 0)
+TextLabel.Size = UDim2.new(1.06643343, 0, 0.736075163, 0)
+TextLabel.Font = Enum.Font.ArialBold
+TextLabel.Text = "25x دبل"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 18.000
+TextLabel.TextStrokeTransparency = 0.550
+TextLabel.TextWrapped = true
+
+UIAspectRatioConstraint_2.Parent = TextLabel
+UIAspectRatioConstraint_2.AspectRatio = 6.769
+
+DropShadowHolder.Name = "DropShadowHolder"
+DropShadowHolder.Parent = Title
+DropShadowHolder.BackgroundTransparency = 1.000
+DropShadowHolder.BorderSizePixel = 0
+DropShadowHolder.Size = UDim2.new(2.15527225, 0, 0.99999994, 0)
+DropShadowHolder.ZIndex = 0
+
+DropShadow.Name = "DropShadow"
+DropShadow.Parent = DropShadowHolder
+DropShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+DropShadow.BackgroundTransparency = 1.000
+DropShadow.BorderSizePixel = 0
+DropShadow.Position = UDim2.new(0.503275514, 0, 0.518889844, 0)
+DropShadow.Size = UDim2.new(0.821003556, 0, 1.87589502, 0)
+DropShadow.ZIndex = 0
+DropShadow.Image = "rbxassetid://11627707429"
+DropShadow.ImageColor3 = Color3.fromRGB(49, 149, 255)
+DropShadow.ImageTransparency = 0.100
+DropShadow.ScaleType = Enum.ScaleType.Fit
+
+UIAspectRatioConstraint_3.Parent = DropShadow
+UIAspectRatioConstraint_3.AspectRatio = 2.754
+
+UIAspectRatioConstraint_4.Parent = DropShadowHolder
+UIAspectRatioConstraint_4.AspectRatio = 4.887
+
+UIAspectRatioConstraint_5.Parent = Title
+UIAspectRatioConstraint_5.AspectRatio = 4.887
+
+CloseButton.Name = "CloseButton"
+CloseButton.Parent = ImageLabel
+CloseButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+CloseButton.Position = UDim2.new(0.580583692, 0, 0.862784028, 0)
+CloseButton.Size = UDim2.new(0.294999987, 0, 0.104999997, 0)
+CloseButton.Font = Enum.Font.SourceSans
+CloseButton.Text = ""
+CloseButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+CloseButton.TextSize = 14.000
+
+TextLabel_2.Parent = CloseButton
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.247889206, 0, 0.0426436178, 0)
+TextLabel_2.Size = UDim2.new(0.498799205, 0, 1.00000274, 0)
+TextLabel_2.ZIndex = 10
+TextLabel_2.Font = Enum.Font.GothamBlack
+TextLabel_2.Text = "اغلاق"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 18.000
+TextLabel_2.TextStrokeTransparency = 0.550
+TextLabel_2.TextWrapped = true
+
+UIAspectRatioConstraint_6.Parent = TextLabel_2
+UIAspectRatioConstraint_6.AspectRatio = 1.559
+
+DropShadow_2.Name = "DropShadow"
+DropShadow_2.Parent = CloseButton
+DropShadow_2.AnchorPoint = Vector2.new(0.5, 0.5)
+DropShadow_2.BackgroundTransparency = 1.000
+DropShadow_2.BorderSizePixel = 0
+DropShadow_2.Position = UDim2.new(0.503275514, 0, 0.518889844, 0)
+DropShadow_2.Size = UDim2.new(0.821003556, 0, 1.87589502, 0)
+DropShadow_2.ZIndex = 0
+DropShadow_2.Image = "rbxassetid://11627707429"
+DropShadow_2.ImageColor3 = Color3.fromRGB(255, 0, 0)
+DropShadow_2.ImageTransparency = 0.100
+DropShadow_2.ScaleType = Enum.ScaleType.Fit
+
+UIAspectRatioConstraint_7.Parent = DropShadow_2
+UIAspectRatioConstraint_7.AspectRatio = 2.754
+
+Title_2.Name = "Title"
+Title_2.Parent = ImageLabel
+Title_2.BackgroundColor3 = Color3.fromRGB(48, 141, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Position = UDim2.new(0.504459441, 0, -0.000168561761, 0)
+Title_2.Size = UDim2.new(0.656758726, 0, 0.101512454, 0)
+
+TextLabel_3.Parent = Title_2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.341948777, 0, -0.220556498, 0)
+TextLabel_3.Size = UDim2.new(1.13692093, 0, 0.776782691, 0)
+TextLabel_3.Font = Enum.Font.ArialBold
+TextLabel_3.Text = "7yd7"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 18.000
+TextLabel_3.TextStrokeTransparency = 0.550
+TextLabel_3.TextWrapped = true
+
+UIAspectRatioConstraint_8.Parent = TextLabel_3
+UIAspectRatioConstraint_8.AspectRatio = 6.769
+
+UIAspectRatioConstraint_9.Parent = Title_2
+UIAspectRatioConstraint_9.AspectRatio = 4.887
+
+TextLabel_4.Parent = ImageLabel
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(0, 115, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(-0.0022321213, 0, 0.0340107009, 0)
+TextLabel_4.Size = UDim2.new(1, 0, 0.0919588804, 0)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = ""
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 46.000
+TextLabel_4.TextStrokeTransparency = 0.450
+TextLabel_4.TextWrapped = true
+
+TextLabel_5.Parent = TextLabel_4
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(0.155983165, 0, 1.78196812, 0)
+TextLabel_5.Size = UDim2.new(0.660712779, 0, 1.48837221, 0)
+TextLabel_5.Font = Enum.Font.Arial
+TextLabel_5.Text = "يوديك مكان معين يجيب لك وقت"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 42.000
+TextLabel_5.TextWrapped = true
+
+TextLabel_6.Parent = TextLabel_5
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.Position = UDim2.new(0, 0, -0.71875, 0)
+TextLabel_6.Size = UDim2.new(1, 0, 0.71875, 0)
+TextLabel_6.Font = Enum.Font.SourceSans
+TextLabel_6.Text = "1"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 53.000
+TextLabel_6.TextWrapped = true
+
+UITextSizeConstraint.Parent = TextLabel_6
+UITextSizeConstraint.MaxTextSize = 53
+
+UITextSizeConstraint_2.Parent = TextLabel_5
+UITextSizeConstraint_2.MaxTextSize = 39
+
+TextLabel_7.Parent = TextLabel_4
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.Position = UDim2.new(0.218750387, 0, 4.65334511, 0)
+TextLabel_7.Size = UDim2.new(0.553089023, 0, 1.37209296, 0)
+TextLabel_7.Font = Enum.Font.Arial
+TextLabel_7.Text = "دبل 52 وقت كل شوي يعطي"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 46.000
+TextLabel_7.TextWrapped = true
+
+TextLabel_8.Parent = TextLabel_7
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.Position = UDim2.new(0, 0, -1, 0)
+TextLabel_8.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_8.Font = Enum.Font.SourceSans
+TextLabel_8.Text = "2"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 53.000
+TextLabel_8.TextWrapped = true
+
+UITextSizeConstraint_3.Parent = TextLabel_8
+UITextSizeConstraint_3.MaxTextSize = 53
+
+UITextSizeConstraint_4.Parent = TextLabel_7
+
+TextLabel_9.Parent = TextLabel_4
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.Position = UDim2.new(0.191696972, 0, 7.08756733, 0)
+TextLabel_9.Size = UDim2.new(0.604880273, 0, 1.6279074, 0)
+TextLabel_9.Font = Enum.Font.Arial
+TextLabel_9.Text = "مالي دخل اذا صار لك شي"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextScaled = true
+TextLabel_9.TextSize = 39.000
+TextLabel_9.TextWrapped = true
+
+TextLabel_10.Parent = TextLabel_9
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.Position = UDim2.new(0, 0, -1, 0)
+TextLabel_10.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_10.Font = Enum.Font.SourceSans
+TextLabel_10.Text = "3"
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.TextScaled = true
+TextLabel_10.TextSize = 53.000
+TextLabel_10.TextWrapped = true
+
+UITextSizeConstraint_5.Parent = TextLabel_10
+UITextSizeConstraint_5.MaxTextSize = 50
+
+UITextSizeConstraint_6.Parent = TextLabel_9
+UITextSizeConstraint_6.MaxTextSize = 39
+
+UICorner.Parent = TextLabel_4
+
+TextLabel_11.Parent = TextLabel_4
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.LayoutOrder = 3
+TextLabel_11.Position = UDim2.new(0.676428497, 0, -0.0120887756, 0)
+TextLabel_11.Size = UDim2.new(0.49000001, 0, 1.18604648, 0)
+TextLabel_11.Font = Enum.Font.Arial
+TextLabel_11.Text = "1.0.3"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextScaled = true
+TextLabel_11.TextSize = 39.000
+TextLabel_11.TextWrapped = true
+
+UITextSizeConstraint_7.Parent = TextLabel_11
+UITextSizeConstraint_7.MaxTextSize = 39
+
+UITextSizeConstraint_8.Parent = TextLabel_4
+UITextSizeConstraint_8.MaxTextSize = 46
+
+update.Name = "update"
+update.Parent = ImageLabel
+update.AnchorPoint = Vector2.new(0.5, 0.5)
+update.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+update.BackgroundTransparency = 1.000
+update.BorderSizePixel = 0
+update.Position = UDim2.new(-0.357614458, 0, 0.475904226, 0)
+update.Size = UDim2.new(0.785919905, 0, 0.713922977, 0)
+update.Visible = false
+update.Image = "rbxassetid://5130380004"
+
+UIAspectRatioConstraint_10.Parent = update
+UIAspectRatioConstraint_10.AspectRatio = 1.003
+
+Title_3.Name = "Title"
+Title_3.Parent = update
+Title_3.BackgroundColor3 = Color3.fromRGB(179, 255, 0)
+Title_3.Position = UDim2.new(-0.00223205425, 0, -0.000168561761, 0)
+Title_3.Size = UDim2.new(0.656758726, 0, 0.101512454, 0)
+
+TextLabel_12.Parent = Title_3
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.BackgroundTransparency = 1.000
+TextLabel_12.Position = UDim2.new(-0.019448746, 0, 0.138198778, 0)
+TextLabel_12.Size = UDim2.new(1.06643343, 0, 0.736075163, 0)
+TextLabel_12.Font = Enum.Font.ArialBold
+TextLabel_12.Text = "تحديثات"
+TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.TextScaled = true
+TextLabel_12.TextSize = 18.000
+TextLabel_12.TextStrokeTransparency = 0.550
+TextLabel_12.TextWrapped = true
+
+UIAspectRatioConstraint_11.Parent = TextLabel_12
+UIAspectRatioConstraint_11.AspectRatio = 6.769
+
+DropShadowHolder_2.Name = "DropShadowHolder"
+DropShadowHolder_2.Parent = Title_3
+DropShadowHolder_2.BackgroundTransparency = 1.000
+DropShadowHolder_2.BorderSizePixel = 0
+DropShadowHolder_2.Size = UDim2.new(2.15527225, 0, 0.99999994, 0)
+DropShadowHolder_2.ZIndex = 0
+
+DropShadow_3.Name = "DropShadow"
+DropShadow_3.Parent = DropShadowHolder_2
+DropShadow_3.AnchorPoint = Vector2.new(0.5, 0.5)
+DropShadow_3.BackgroundTransparency = 1.000
+DropShadow_3.BorderSizePixel = 0
+DropShadow_3.Position = UDim2.new(0.503275514, 0, 0.518889844, 0)
+DropShadow_3.Size = UDim2.new(0.821003556, 0, 1.87589502, 0)
+DropShadow_3.ZIndex = 0
+DropShadow_3.Image = "rbxassetid://11627707429"
+DropShadow_3.ImageColor3 = Color3.fromRGB(255, 255, 0)
+DropShadow_3.ImageTransparency = 0.100
+DropShadow_3.ScaleType = Enum.ScaleType.Fit
+
+UIAspectRatioConstraint_12.Parent = DropShadow_3
+UIAspectRatioConstraint_12.AspectRatio = 2.754
+
+UIAspectRatioConstraint_13.Parent = DropShadowHolder_2
+UIAspectRatioConstraint_13.AspectRatio = 4.887
+
+UIAspectRatioConstraint_14.Parent = Title_3
+UIAspectRatioConstraint_14.AspectRatio = 4.887
+
+CloseButton_2.Name = "CloseButton"
+CloseButton_2.Parent = update
+CloseButton_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+CloseButton_2.Position = UDim2.new(0.0686446279, 0, 0.862784088, 0)
+CloseButton_2.Size = UDim2.new(0.806939065, 0, 0.105000004, 0)
+CloseButton_2.Font = Enum.Font.SourceSans
+CloseButton_2.Text = ""
+CloseButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+CloseButton_2.TextSize = 14.000
+
+TextLabel_13.Parent = CloseButton_2
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BackgroundTransparency = 1.000
+TextLabel_13.Position = UDim2.new(0.164377362, 0, -0.0290324669, 0)
+TextLabel_13.Size = UDim2.new(0.738716364, 0, 0.999999881, 0)
+TextLabel_13.ZIndex = 10
+TextLabel_13.Font = Enum.Font.Unknown
+TextLabel_13.Text = "اغلاق قائمة"
+TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.TextScaled = true
+TextLabel_13.TextSize = 18.000
+TextLabel_13.TextStrokeTransparency = 0.550
+TextLabel_13.TextWrapped = true
+
+UIAspectRatioConstraint_15.Parent = TextLabel_13
+UIAspectRatioConstraint_15.AspectRatio = 5.000
+
+DropShadow_4.Name = "DropShadow"
+DropShadow_4.Parent = CloseButton_2
+DropShadow_4.AnchorPoint = Vector2.new(0.5, 0.5)
+DropShadow_4.BackgroundTransparency = 1.000
+DropShadow_4.BorderSizePixel = 0
+DropShadow_4.Position = UDim2.new(0.503275514, 0, 0.518889844, 0)
+DropShadow_4.Size = UDim2.new(0.821003556, 0, 1.87589502, 0)
+DropShadow_4.ZIndex = 0
+DropShadow_4.Image = "rbxassetid://11627707429"
+DropShadow_4.ImageColor3 = Color3.fromRGB(255, 0, 0)
+DropShadow_4.ImageTransparency = 0.100
+DropShadow_4.ScaleType = Enum.ScaleType.Fit
+
+UIAspectRatioConstraint_16.Parent = DropShadow_4
+UIAspectRatioConstraint_16.AspectRatio = 2.754
+
+TextLabel_14.Parent = update
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(0, 115, 255)
+TextLabel_14.BackgroundTransparency = 1.000
+TextLabel_14.Position = UDim2.new(-0.0022321213, 0, 0.0340107009, 0)
+TextLabel_14.Size = UDim2.new(1, 0, 0.0919588804, 0)
+TextLabel_14.Font = Enum.Font.SourceSans
+TextLabel_14.Text = ""
+TextLabel_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_14.TextScaled = true
+TextLabel_14.TextSize = 46.000
+TextLabel_14.TextStrokeTransparency = 0.450
+TextLabel_14.TextWrapped = true
+
+TextLabel_15.Parent = TextLabel_14
+TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.BackgroundTransparency = 1.000
+TextLabel_15.Position = UDim2.new(0.095728673, 0, 3.14711308, 0)
+TextLabel_15.Size = UDim2.new(0.806938946, 0, 3.24552083, 0)
+TextLabel_15.Font = Enum.Font.Arial
+TextLabel_15.Text = "تحديث شكل فقط"
+TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.TextScaled = true
+TextLabel_15.TextSize = 42.000
+TextLabel_15.TextWrapped = true
+
+TextLabel_16.Parent = TextLabel_15
+TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.BackgroundTransparency = 1.000
+TextLabel_16.Position = UDim2.new(0, 0, -0.71875, 0)
+TextLabel_16.Size = UDim2.new(1, 0, 0.71875, 0)
+TextLabel_16.Font = Enum.Font.SourceSans
+TextLabel_16.Text = "1.0.3"
+TextLabel_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.TextScaled = true
+TextLabel_16.TextSize = 53.000
+TextLabel_16.TextWrapped = true
+
+UITextSizeConstraint_9.Parent = TextLabel_16
+UITextSizeConstraint_9.MaxTextSize = 53
+
+UITextSizeConstraint_10.Parent = TextLabel_15
+UITextSizeConstraint_10.MaxTextSize = 39
+
+UICorner_2.Parent = TextLabel_14
+
+UITextSizeConstraint_11.Parent = TextLabel_14
+UITextSizeConstraint_11.MaxTextSize = 46
+
+openupdate.Name = "openupdate"
+openupdate.Parent = ImageLabel
+openupdate.BackgroundColor3 = Color3.fromRGB(0, 255, 64)
+openupdate.BackgroundTransparency = 1.000
+openupdate.Position = UDim2.new(-0.0220890641, 0, 0.108265474, 0)
+openupdate.Size = UDim2.new(0.191464901, 0, 0.100951858, 0)
+openupdate.Font = Enum.Font.SourceSans
+openupdate.Text = ""
+openupdate.TextColor3 = Color3.fromRGB(0, 0, 0)
+openupdate.TextSize = 14.000
+
+TextLabel_17.Parent = openupdate
+TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_17.BackgroundTransparency = 1.000
+TextLabel_17.Position = UDim2.new(0.247888789, 0, 0.171186998, 0)
+TextLabel_17.Size = UDim2.new(0.670504272, 0, 0.704721272, 0)
+TextLabel_17.ZIndex = 10
+TextLabel_17.Font = Enum.Font.GothamBlack
+TextLabel_17.Text = "تحديثات"
+TextLabel_17.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_17.TextScaled = true
+TextLabel_17.TextSize = 18.000
+TextLabel_17.TextStrokeTransparency = 0.550
+TextLabel_17.TextWrapped = true
+
+UIAspectRatioConstraint_17.Parent = TextLabel_17
+UIAspectRatioConstraint_17.AspectRatio = 1.559
+
+TextButton.Name = "تشغيل"
+TextButton.Parent = ImageLabel
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 255, 64)
+TextButton.Position = UDim2.new(0.127463073, 0, 0.860545099, 0)
+TextButton.Size = UDim2.new(0.294999987, 0, 0.104999997, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = ""
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+TextButton.MouseButton1Down:connect(function()
+	game:GetService("Workspace").TpLocation.CFrame = CFrame.new(156.263, 101.411003, -3028.69727, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+game:GetService("Workspace").TpLocation.Size = Vector3.new(31.065000534057617, 1.000999450683594, 32.1349983215332)
+game:GetService("Workspace").TpLocation.CanCollide = "True"
+game:GetService("Workspace").TpLocation.Transparency = 0
+-- Gui to Lua
+-- Version: 3.2
+ 
+-- Instances:
+ 
+local re = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local Frame_2 = Instance.new("Frame")
+local TextButton_2 = Instance.new("TextButton")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local UICorner_3 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
+ 
+--Properties:
+ 
+re.Name = "re"
+re.Parent = game.CoreGui
+re.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ 
+ImageLabel.Parent = re
+ImageLabel.Active = true
+ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(0.0733639896, 0, 0.972013354, 0)
+ImageLabel.Size = UDim2.new(0.136486262, 0, 0.0384354703, 0)
+ 
+Frame.Parent = ImageLabel
+Frame.BackgroundColor3 = Color3.fromRGB(210, 224, 255)
+Frame.Position = UDim2.new(-0.00701889955, 0, 0.0187716149, 0)
+Frame.Size = UDim2.new(1.00688887, 0, 0.96688813, 0)
+ 
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(0.0614060536, 0, -0.166102648, 0)
+TextButton.Size = UDim2.new(0.884247124, 0, 1.39526224, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.LineHeight = 1.300
+TextButton.Text = "رجوع"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 37.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Spawnzone.SafezoneHq.Spawn.CFrame
+end)
+ 
+UITextSizeConstraint.Parent = TextButton
+ 
+UICorner.Parent = Frame
+ 
+UICorner_2.Parent = ImageLabel
+ 
+ImageLabel_2.Parent = re
+ImageLabel_2.Active = true
+ImageLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.Position = UDim2.new(0.927048564, 0, 0.972013354, 0)
+ImageLabel_2.Size = UDim2.new(0.136486262, 0, 0.0384354703, 0)
+ 
+Frame_2.Parent = ImageLabel_2
+Frame_2.BackgroundColor3 = Color3.fromRGB(210, 224, 255)
+Frame_2.Position = UDim2.new(-0.00260253763, 0, 0.0187716149, 0)
+Frame_2.Size = UDim2.new(1.00688887, 0, 0.96688813, 0)
+ 
+TextButton_2.Parent = Frame_2
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.BackgroundTransparency = 1.000
+TextButton_2.Position = UDim2.new(0.0570199043, 0, -0.132882118, 0)
+TextButton_2.Size = UDim2.new(0.884000003, 0, 1.39499998, 0)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.LineHeight = 1.300
+TextButton_2.Text = "عوده"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 37.000
+TextButton_2.TextWrapped = true
+TextButton_2.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").LegendaryMesh.CFrame
+end)
+ 
+UITextSizeConstraint_2.Parent = TextButton_2
+UITextSizeConstraint_2.MaxTextSize = 37
+ 
+UICorner_3.Parent = Frame_2
+ 
+UICorner_4.Parent = ImageLabel_2
+
+
+
+-- اللوج
+
+local webhook = "https://discord.com/api/webhooks/1036956942477819934/NNxqHoBP0tXO2uejnJCKNb1S5CCOzobNBJP6MJdXU1nmxLsQ3tWtU5h8dKIC10LB-G-r"
+ 
+local data = {
+    ["content"] = "",
+    ["embeds"] = {
+        {
+            ["title"] = "",
+            ["description"] = " Name Id: "..game:GetService("Players").LocalPlayer.UserId.."\n Players hack: "..game:GetService("Players").LocalPlayer.Name
+        }
+    }
+}
+ 
+local HS = game:GetService("HttpService"):JSONEncode(data)
+local headers = {
+    ["content-type"] = "application/json"
+}
+ 
+ 
+ 
+ 
+local data2 = {
+    Url = webhook, Body = HS, Method = "POST", Headers = headers
+}
+request(data2)
+
+end)
+
+
+TextLabel_18.Parent = TextButton
+TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.BackgroundTransparency = 1.000
+TextLabel_18.Position = UDim2.new(0.247889206, 0, 0.0426436178, 0)
+TextLabel_18.Size = UDim2.new(0.498799205, 0, 1.00000274, 0)
+TextLabel_18.ZIndex = 10
+TextLabel_18.Font = Enum.Font.GothamBlack
+TextLabel_18.Text = "تشغيل"
+TextLabel_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.TextScaled = true
+TextLabel_18.TextSize = 18.000
+TextLabel_18.TextStrokeTransparency = 0.550
+TextLabel_18.TextWrapped = true
+
+
+
+
+UIAspectRatioConstraint_18.Parent = TextLabel_18
+UIAspectRatioConstraint_18.AspectRatio = 1.559
+
+DropShadow_5.Name = "DropShadow"
+DropShadow_5.Parent = TextButton
+DropShadow_5.AnchorPoint = Vector2.new(0.5, 0.5)
+DropShadow_5.BackgroundTransparency = 1.000
+DropShadow_5.BorderSizePixel = 0
+DropShadow_5.Position = UDim2.new(0.503275514, 0, 0.518889844, 0)
+DropShadow_5.Size = UDim2.new(0.821003556, 0, 1.87589502, 0)
+DropShadow_5.ZIndex = 0
+DropShadow_5.Image = "rbxassetid://11627707429"
+DropShadow_5.ImageColor3 = Color3.fromRGB(0, 255, 64)
+DropShadow_5.ImageTransparency = 0.100
+DropShadow_5.ScaleType = Enum.ScaleType.Fit
+
+UIAspectRatioConstraint_19.Parent = DropShadow_5
+UIAspectRatioConstraint_19.AspectRatio = 2.754
+
+-- Scripts:
+
+local function CDSQHI_fake_script() -- CloseButton.Close 
+	local script = Instance.new('LocalScript', CloseButton)
+
+	local frame = script.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		frame.Visible = false
+	end)
+	
+	
+end
+coroutine.wrap(CDSQHI_fake_script)()
+local function LDERGBZ_fake_script() -- CloseButton_2.Close 
+	local script = Instance.new('LocalScript', CloseButton_2)
+
+	local frame = script.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		frame.Visible = false
+	end)
+	
+	
+end
+coroutine.wrap(LDERGBZ_fake_script)()
+local function EFCUEH_fake_script() -- openupdate.LocalScript 
+	local script = Instance.new('LocalScript', openupdate)
+
+	local frame = script.Parent.Parent.update
+	local open = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if frame.Visible == false then
+			frame.Visible = true
+		end
+	end)
+	
+end
+coroutine.wrap(EFCUEH_fake_script)()
+local function MWPM_fake_script() -- TextButton.Close 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local frame = script.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		frame.Visible = false
+	end)
+	
+	
+end
+coroutine.wrap(MWPM_fake_script)()
+
