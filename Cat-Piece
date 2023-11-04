@@ -2,7 +2,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Cat Piece", "BloodTheme")
 
 local qTab = Window:NewTab("player")
-local gTab = Window:NewTab("hack")
+local gTab = Window:NewTab("Auto Farm")
 local editTab = Window:NewTab("edit")
 local fruitsTab = Window:NewTab("fruits")
 local turningTab = Window:NewTab("turning")
@@ -108,8 +108,39 @@ end)
 Fly()
 end)
 
+local Section = gTab:NewSection("ShadowFruit")
+
+Section:NewButton("ShadowShadow", "", function()
+
+
+    local ohString1 = "Eat"
+    local ohString2 = "ShadowShadow"
+    local ohString3 = "ShadowFruit"
+    
+    game:GetService("ReplicatedStorage").SystemFruitEatV1.SecureEated:FireServer(ohString1, ohString2, ohString3)
+            
+end)
+    
+    
+    Section:NewToggle("ShadowFruit C", "", function(state)
+        if state then
+            getgenv().Autoclick = true 
+            repeat wait (2)
+                for _, NPC in pairs(workspace.NPCS:GetChildren()) do
+                    local ohVector31 = NPC:FindFirstChild("HumanoidRootPart").Position
+                    
+                  game.Players.LocalPlayer.Character.ShadowFruit.SkillC.Fire:FireServer(ohVector31)
+                  end
+                  
+            until getgenv().Autoclick == false
+        else
+            getgenv().Autoclick = false
+        end
+    end)
+
 
 local Section = gTab:NewSection("Light")
+
 
 Section:NewButton("LightFruit", "", function()
 local ohString1 = "Eat"
@@ -132,7 +163,7 @@ for _, NPC in pairs(workspace.NPCS:GetChildren()) do
   local ohVector32 = NPC:FindFirstChild("HumanoidRootPart").Position
   local ohInstance3 = workspace.Camera
 
-  workspace.afwafwwgwe22.Light.SkillZ.RemoteEvent:FireServer(ohCFrame1, ohVector32, ohInstance3)
+  game.Players.LocalPlayer.Character.Light.SkillZ.RemoteEvent:FireServer(ohCFrame1, ohVector32, ohInstance3)
 end
 
 
@@ -161,7 +192,7 @@ Section:NewToggle("ONEYEARSWORD Z", "", function(state)
         repeat wait (2)
 for _, NPC in pairs(workspace.NPCS:GetChildren()) do
   local ohCFrame1 = NPC:FindFirstChild("HumanoidRootPart").CFrame
-  workspace.afwafwwgwe22.ONEYEARSWORD.SkillX.Fire:FireServer(ohCFrame1)
+  game.Players.LocalPlayer.Character.ONEYEARSWORD.SkillX.Fire:FireServer(ohCFrame1)
 end
 
 
@@ -194,7 +225,7 @@ local ohCFrame1 = NPC:FindFirstChild("HumanoidRootPart").CFrame
   local ohVector32 = NPC:FindFirstChild("HumanoidRootPart").Position
   local ohInstance3 = workspace.Camera
 
-  workspace.afwafwwgwe22.ToriDF.PSkillX.RemoteEvent:FireServer(ohCFrame1, ohVector32, ohInstance3)
+  game.Players.LocalPlayer.Character.ToriDF.PSkillX.RemoteEvent:FireServer(ohCFrame1, ohVector32, ohInstance3)
 end
 
 
@@ -223,7 +254,7 @@ Section:NewToggle("GUMGear5 V", "", function(state)
 
 local ohInstance1 = game:GetService("Players").LocalPlayer
 
-workspace.afwafwwgwe22.GUMGear5.SkillV.Fire:FireServer(ohInstance1)
+game.Players.LocalPlayer.Character.GUMGear5.SkillV.Fire:FireServer(ohInstance1)
 
         until getgenv().Autoclick == false
     else
@@ -241,7 +272,7 @@ Section:NewToggle("GUMGear5 C", "", function(state)
 
 local ohInstance1 = game:GetService("Players").LocalPlayer
 
-workspace.afwafwwgwe22.GUMGear5.SkillC.Fire:FireServer(ohInstance1)
+game.Players.LocalPlayer.Character.GUMGear5.SkillC.Fire:FireServer(ohInstance1)
 
         until getgenv().Autoclick == false
     else
@@ -275,7 +306,7 @@ for _, NPC in pairs(workspace.NPCS:GetChildren()) do
   local ohCFrame1 = NPC:FindFirstChild("HumanoidRootPart").CFrame
   local ohVector32 = NPC:FindFirstChild("HumanoidRootPart").Position
 
-  workspace.afwafwwgwe22.SmokeDF.SkillZ.RemoteEvent:FireServer(ohCFrame1, ohVector32)
+  game.Players.LocalPlayer.Character.SmokeDF.SkillZ.RemoteEvent:FireServer(ohCFrame1, ohVector32)
 end
 
 
@@ -311,7 +342,7 @@ for _, NPC in pairs(workspace.NPCS:GetChildren()) do
   local ohCFrame1 = NPC:FindFirstChild("HumanoidRootPart").CFrame
   local ohVector32 = NPC:FindFirstChild("HumanoidRootPart").Position
   local ohInstance3 = workspace.Camera
-  workspace.afwafwwgwe22.Paw.SkillZ.RemoteEvent:FireServer(ohCFrame1, ohVector32, ohInstance3)
+  game.Players.LocalPlayer.Character.Paw.SkillZ.RemoteEvent:FireServer(ohCFrame1, ohVector32, ohInstance3)
 end
 
 
@@ -344,7 +375,7 @@ Section:NewToggle("BombDF Z", "", function(state)
 for _, NPC in pairs(workspace.NPCS:GetChildren()) do
   local ohCFrame1 = NPC:FindFirstChild("HumanoidRootPart").CFrame
   local ohVector32 = NPC:FindFirstChild("HumanoidRootPart").Position
-  workspace.afwafwwgwe22.BombDF.SkillZ.RemoteEvent:FireServer(ohCFrame1, ohVector32)
+  game.Players.LocalPlayer.Character.BombDF.SkillZ.RemoteEvent:FireServer(ohCFrame1, ohVector32)
 end
 
         until getgenv().Autoclick == false
@@ -501,6 +532,16 @@ game:GetService("ReplicatedStorage").SystemFruitEatV1.SecureEated:FireServer(ohS
 
 end)
 
+Section:NewButton("ColdFruit", "", function()
+
+
+local ohString1 = "Eat"
+local ohString2 = "ColdCold"
+local ohString3 = "ColdFruit"
+
+game:GetService("ReplicatedStorage").SystemFruitEatV1.SecureEated:FireServer(ohString1, ohString2, ohString3)
+end)
+
 Section:NewButton("Paw", "", function()
 
 local ohString1 = "Eat"
@@ -546,6 +587,7 @@ game:GetService("ReplicatedStorage").SystemFruitEatV1.SecureEated:FireServer(ohS
 end)
 
 local Section = turningTab:NewSection("Rare")
+
 
 Section:NewButton("CHAINSAWMAN", "", function()
 
@@ -689,6 +731,38 @@ game:GetService("ReplicatedStorage").SystemFruitEatV1.SecureEated:FireServer(ohS
 
 end)
 
+Section:NewButton("SoundFruit", "", function()
+
+
+local ohString1 = "Eat"
+local ohString2 = "SoundSound"
+local ohString3 = "SoundFruit"
+
+game:GetService("ReplicatedStorage").SystemFruitEatV1.SecureEated:FireServer(ohString1, ohString2, ohString3)
+    
+end)
+
+Section:NewButton("ShadowFruit", "", function()
+
+
+local ohString1 = "Eat"
+local ohString2 = "ShadowShadow"
+local ohString3 = "ShadowFruit"
+
+game:GetService("ReplicatedStorage").SystemFruitEatV1.SecureEated:FireServer(ohString1, ohString2, ohString3)
+        
+end)
+
+Section:NewButton("VenomVenom", "", function()
+
+local ohString1 = "Eat"
+local ohString2 = "VenomFruit"
+local ohString3 = "VenomVenom"
+
+game:GetService("ReplicatedStorage").SystemFruitEatV1.SecureEated:FireServer(ohString1, ohString2, ohString3)
+            
+ end)
+
 local Section = moreTab:NewSection("more")
 
 Section:NewToggle("Kill All Players (Light)", "", function(state)
@@ -702,7 +776,7 @@ for i, v in pairs(game.Players:GetPlayers()) do
         local ohVector32 = v.Character.HumanoidRootPart.Position
         local ohInstance3 = workspace.Camera
 
-        workspace.afwafwwgwe22.Light.SkillZ.RemoteEvent:FireServer(ohCFrame1, ohVector32, ohInstance3)
+        game.Players.LocalPlayer.Character.Light.SkillZ.RemoteEvent:FireServer(ohCFrame1, ohVector32, ohInstance3)
     end
 end
         until getgenv().Autoclick == false
@@ -743,7 +817,7 @@ Section:NewButton("FruitSpawner", "", function()
 local fruits = workspace.FruitSpawner.SpawnedDFS:GetChildren()
 
 for _, fruit in pairs(fruits) do
-  fruit.Handle.CFrame = workspace.afwafwwgwe22.HumanoidRootPart.CFrame
+  fruit.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end
 end)
 
@@ -758,7 +832,7 @@ for _, NPC in pairs(workspace.MobsFolder:GetChildren()) do
   local ohVector32 = NPC:FindFirstChild("HumanoidRootPart").Position
   local ohInstance3 = workspace.Camera
 
-  workspace.afwafwwgwe22.Light.SkillZ.RemoteEvent:FireServer(ohCFrame1, ohVector32, ohInstance3)
+  game.Players.LocalPlayer.Character.Light.SkillZ.RemoteEvent:FireServer(ohCFrame1, ohVector32, ohInstance3)
 end
 
 
