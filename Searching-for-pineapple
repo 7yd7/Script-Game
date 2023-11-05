@@ -26,21 +26,26 @@ game.StarterGui:SetCore("SendNotification",  {
 local workspacef = workspace
 local foundCar = false
 
+local badges = {}
+
 for _, child in pairs(workspacef:GetChildren()) do
   if child.Name:match("Badge") then
-    foundCar = true
-    local success, error = pcall(function()
-local part = child
-
-local originalCFrame = part.CFrame
-
-part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-
-wait(1)
-
-part.CFrame = originalCFrame
-	    end)
+    badges[#badges + 1] = child
   end
+end
+
+for _, badge in ipairs(badges) do
+  local success, error = pcall(function()
+    local part = badge
+
+    local originalCFrame = part.CFrame
+
+    part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+    wait(.2)
+
+    part.CFrame = originalCFrame
+  end)
 end
 
 wait(.3)
@@ -48,21 +53,26 @@ wait(.3)
 local workspacef = workspace["Candy World"]
 local foundCar = false
 
+local badges = {}
+
 for _, child in pairs(workspacef:GetChildren()) do
   if child.Name:match("Badge") then
-    foundCar = true
-    local success, error = pcall(function()
-local part = child
-
-local originalCFrame = part.CFrame
-
-part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-
-wait(1)
-
-part.CFrame = originalCFrame
-	    end)
+    badges[#badges + 1] = child
   end
+end
+
+for _, badge in ipairs(badges) do
+  local success, error = pcall(function()
+    local part = badge
+
+    local originalCFrame = part.CFrame
+
+    part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+    wait(.2)
+
+    part.CFrame = originalCFrame
+  end)
 end
 
 wait(.3)
@@ -70,21 +80,26 @@ wait(.3)
 local workspacef = workspace["Forest World"]
 local foundCar = false
 
+local badges = {}
+
 for _, child in pairs(workspacef:GetChildren()) do
   if child.Name:match("Badge") then
-    foundCar = true
-    local success, error = pcall(function()
-local part = child
-
-local originalCFrame = part.CFrame
-
-part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-
-wait(1)
-
-part.CFrame = originalCFrame
-	    end)
+    badges[#badges + 1] = child
   end
+end
+
+for _, badge in ipairs(badges) do
+  local success, error = pcall(function()
+    local part = badge
+
+    local originalCFrame = part.CFrame
+
+    part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+    wait(.2)
+
+    part.CFrame = originalCFrame
+  end)
 end
 
 wait(.3)
@@ -92,21 +107,26 @@ wait(.3)
 local workspacef = workspace["Lava World"]
 local foundCar = false
 
+local badges = {}
+
 for _, child in pairs(workspacef:GetChildren()) do
   if child.Name:match("Badge") then
-    foundCar = true
-    local success, error = pcall(function()
-local part = child
-
-local originalCFrame = part.CFrame
-
-part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-
-wait(1)
-
-part.CFrame = originalCFrame
-	    end)
+    badges[#badges + 1] = child
   end
+end
+
+for _, badge in ipairs(badges) do
+  local success, error = pcall(function()
+    local part = badge
+
+    local originalCFrame = part.CFrame
+
+    part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+    wait(.2)
+
+    part.CFrame = originalCFrame
+  end)
 end
 
 wait(.3)
@@ -114,21 +134,26 @@ wait(.3)
 local workspacef = workspace["Ocean World"]
 local foundCar = false
 
+local badges = {}
+
 for _, child in pairs(workspacef:GetChildren()) do
   if child.Name:match("Badge") then
-    foundCar = true
-    local success, error = pcall(function()
-local part = child
-
-local originalCFrame = part.CFrame
-
-part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-
-wait(1)
-
-part.CFrame = originalCFrame
-	    end)
+    badges[#badges + 1] = child
   end
+end
+
+for _, badge in ipairs(badges) do
+  local success, error = pcall(function()
+    local part = badge
+
+    local originalCFrame = part.CFrame
+
+    part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+    wait(.2)
+
+    part.CFrame = originalCFrame
+  end)
 end
 
 wait(.3)
@@ -136,21 +161,26 @@ wait(.3)
 local workspacef = workspace["Pyrimds"]
 local foundCar = false
 
+local badges = {}
+
 for _, child in pairs(workspacef:GetChildren()) do
   if child.Name:match("Badge") then
-    foundCar = true
-    local success, error = pcall(function()
-local part = child
-
-local originalCFrame = part.CFrame
-
-part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-
-wait(1)
-
-part.CFrame = originalCFrame
-	    end)
+    badges[#badges + 1] = child
   end
+end
+
+for _, badge in ipairs(badges) do
+  local success, error = pcall(function()
+    local part = badge
+
+    local originalCFrame = part.CFrame
+
+    part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+    wait(.2)
+
+    part.CFrame = originalCFrame
+  end)
 end
 
 wait(.3)
@@ -158,21 +188,52 @@ wait(.3)
 local workspacef = workspace["Snow World"]
 local foundCar = false
 
+local badges = {}
+
 for _, child in pairs(workspacef:GetChildren()) do
   if child.Name:match("Badge") then
-    foundCar = true
-    local success, error = pcall(function()
-local part = child
-
-local originalCFrame = part.CFrame
-
-part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-
-wait(1)
-
-part.CFrame = originalCFrame
-	    end)
+    badges[#badges + 1] = child
   end
+end
+
+for _, badge in ipairs(badges) do
+  local success, error = pcall(function()
+    local part = badge
+
+    local originalCFrame = part.CFrame
+
+    part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+    wait(.2)
+
+    part.CFrame = originalCFrame
+  end)
+end
+
+-- عالم سابع
+local workspacef = workspace["Sand World"]
+local foundCar = false
+
+local badges = {}
+
+for _, child in pairs(workspacef:GetChildren()) do
+  if child.Name:match("Badge") then
+    badges[#badges + 1] = child
+  end
+end
+
+for _, badge in ipairs(badges) do
+  local success, error = pcall(function()
+    local part = badge
+
+    local originalCFrame = part.CFrame
+
+    part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+    wait(.2)
+
+    part.CFrame = originalCFrame
+  end)
 end
 
 -- نهايه اغراض
