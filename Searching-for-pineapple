@@ -300,7 +300,6 @@ local foundCar = false
 local Pineapple = {}
 
 for _, child in pairs(workspacef:GetChildren()) do
-  if child.Name:match("انا") then
     Pineapple[#Pineapple + 1] = child
   end
 end
