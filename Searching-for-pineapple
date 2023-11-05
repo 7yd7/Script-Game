@@ -1,3 +1,18 @@
+-- قيم باس
+game:GetService("ReplicatedStorage").SuperFlyGoldBoombox:FireServer()
+game:GetService("ReplicatedStorage").SpeedCoil:FireServer()
+game:GetService("ReplicatedStorage").GravityCoil:FireServer()
+game:GetService("ReplicatedStorage").FidgetSpinner:FireServer()
+game:GetService("ReplicatedStorage").BodySwapPotion:FireServer()
+-- رساله قيم باس
+game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم اخذ جميع الاغراض قيم باس";
+    Text = "(لما تطلع تدخل سوف يذهب قيم باس)";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+   
 -- الانتظار
 game.StarterGui:SetCore("SendNotification",  {
  Title = "سوف يتم اخذ جميع badges/الاناناس";
