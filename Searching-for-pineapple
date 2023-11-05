@@ -1,0 +1,171 @@
+-- الانتظار
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "سوف يتم اخذ جميع badges/الاناناس";
+ Text = "(يستغرق وقتا سوف انبه لك لما تحصل جميع badges/الاناناس)";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
+
+-- اساس ماب
+local workspacef = workspace
+local foundCar = false
+
+for _, child in pairs(workspacef:GetChildren()) do
+  if child.Name:match("Badge") then
+    foundCar = true
+    local success, error = pcall(function()
+local part = child
+
+local originalCFrame = part.CFrame
+
+part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+wait(.6)
+
+part.CFrame = originalCFrame
+	    end)
+  end
+end
+
+wait(.3)
+-- عالم اول
+local workspacef = workspace["Candy World"]
+local foundCar = false
+
+for _, child in pairs(workspacef:GetChildren()) do
+  if child.Name:match("Badge") then
+    foundCar = true
+    local success, error = pcall(function()
+local part = child
+
+local originalCFrame = part.CFrame
+
+part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+wait(.6)
+
+part.CFrame = originalCFrame
+	    end)
+  end
+end
+
+wait(.3)
+-- عالم ثاني
+local workspacef = workspace["Forest World"]
+local foundCar = false
+
+for _, child in pairs(workspacef:GetChildren()) do
+  if child.Name:match("Badge") then
+    foundCar = true
+    local success, error = pcall(function()
+local part = child
+
+local originalCFrame = part.CFrame
+
+part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+wait(.6)
+
+part.CFrame = originalCFrame
+	    end)
+  end
+end
+
+wait(.3)
+-- عالم ثالث
+local workspacef = workspace["Lava World"]
+local foundCar = false
+
+for _, child in pairs(workspacef:GetChildren()) do
+  if child.Name:match("Badge") then
+    foundCar = true
+    local success, error = pcall(function()
+local part = child
+
+local originalCFrame = part.CFrame
+
+part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+wait(.6)
+
+part.CFrame = originalCFrame
+	    end)
+  end
+end
+
+wait(.3)
+-- عالم رابع
+local workspacef = workspace["Ocean World"]
+local foundCar = false
+
+for _, child in pairs(workspacef:GetChildren()) do
+  if child.Name:match("Badge") then
+    foundCar = true
+    local success, error = pcall(function()
+local part = child
+
+local originalCFrame = part.CFrame
+
+part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+wait(.6)
+
+part.CFrame = originalCFrame
+	    end)
+  end
+end
+
+wait(.3)
+-- عالم خامس
+local workspacef = workspace["Pyrimds"]
+local foundCar = false
+
+for _, child in pairs(workspacef:GetChildren()) do
+  if child.Name:match("Badge") then
+    foundCar = true
+    local success, error = pcall(function()
+local part = child
+
+local originalCFrame = part.CFrame
+
+part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+wait(.6)
+
+part.CFrame = originalCFrame
+	    end)
+  end
+end
+
+wait(.3)
+-- عالم سادس
+local workspacef = workspace["Snow World"]
+local foundCar = false
+
+for _, child in pairs(workspacef:GetChildren()) do
+  if child.Name:match("Badge") then
+    foundCar = true
+    local success, error = pcall(function()
+local part = child
+
+local originalCFrame = part.CFrame
+
+part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+wait(.6)
+
+part.CFrame = originalCFrame
+	    end)
+  end
+end
+
+-- نهايه اغراض
+
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "تم حصول جميع badges/الاناناس";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
