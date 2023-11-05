@@ -302,7 +302,7 @@ local Pineapple = {}
 for _, child in pairs(workspacef:GetChildren()) do
     Pineapple[#Pineapple + 1] = child
   end
-end
+
 
 for _, Pineapple in ipairs(Pineapple) do
   local success, error = pcall(function()
