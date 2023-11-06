@@ -1,0 +1,69 @@
+-- البيوت
+local player = game:GetService("Players").LocalPlayer
+local houses = player.Houses:GetChildren()
+local allTrue = true
+
+for _, house in pairs(houses) do
+    if not house.Value then
+        allTrue = false
+        break
+    end
+end
+
+if allTrue then
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "لديك جميع بيوت بل فعل";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
+else
+
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "تم حصول جميع البيوت";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
+-- اخذ جميع بيوت
+
+for _, v in pairs(game:GetService("Players").LocalPlayer.Houses:GetChildren()) do
+local ohString1 = v.Name
+local ohNumber2 = 0
+
+game:GetService("ReplicatedStorage").Events.BuyHouse:FireServer(ohString1, ohNumber2)
+end
+end
+
+-- اعطاء فلوس
+
+-- حد اقصى 10000000000 حاليا
+   local leaderstats = game:GetService("Players").LocalPlayer.leaderstats
+
+   local value = game:GetService("Players").LocalPlayer.leaderstats.Money.Value
+   
+if value >= 10000000000 then
+   -- فلوس
+   game.StarterGui:SetCore("SendNotification",  {
+    Title = "لقد تم اعطاء فلوس بل فعل";
+    Text = "By : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+else
+
+local ohNumber1 = -100000000000000000
+
+game:GetService("ReplicatedStorage").Events.FurnitureMoneyEvent:FireServer(ohNumber1)
+
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "تم اعطاء فلوس";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
+end
