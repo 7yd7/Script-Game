@@ -1,0 +1,43 @@
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local OwnedCars = LocalPlayer.OwnedCars:GetChildren()
+
+local allCarsWorking = true
+
+for _, getallCars in pairs(OwnedCars) do
+  if getallCars.Value ~= true then
+    allCarsWorking = false
+    break
+  end
+end
+
+if allCarsWorking then
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "لديك جميع سيارات بل فعل";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
+else
+
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "تم حصول جميع سيارات";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
+-- اخذ جميع سيارات
+for _, getallCars in pairs(game:GetService("Players").LocalPlayer.OwnedCars:GetChildren()) do
+	getallCars.Value = true
+end
+end
+-- بيع
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "اذا كنت تريد فلوس اذهب السيارات المملوكة الى بيع";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
