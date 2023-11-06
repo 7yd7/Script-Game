@@ -318,6 +318,16 @@ for _, Pineapple in ipairs(Pineapple) do
   end)
 end
 
+local player = game.Players.LocalPlayer
+local rootPart = player.Character.HumanoidRootPart
+
+local lastPosition = rootPart.CFrame.Position
+local lastRotation = rootPart.CFrame.Rotation
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(548.955261, 66.4984245, 780.494263, -0.707134247, 0, 0.707079291, 0, 1, 0, -0.707079291, 0, -0.707134247)
+
+wait(.5)
+rootPart.CFrame = CFrame.fromEulerAngles(lastRotation.X, lastRotation.Y, lastRotation.Z) * CFrame.new(lastPosition)
+
 -- تم حصول جميع انانس
 
 game.StarterGui:SetCore("SendNotification",  {
