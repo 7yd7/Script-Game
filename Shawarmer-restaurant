@@ -67,3 +67,39 @@ game.StarterGui:SetCore("SendNotification",  {
  Callback = NotificationBindable;
 })
 end
+
+-- قيم باس
+
+-- قيم باس وظيمه المدير
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local function runScriptWhenPlayerClicksImage()
+-- مدير
+local ohString1 = "Boss"
+game:GetService("ReplicatedStorage").Events.ChangeTeam:FireServer(ohString1)
+-- رساله تم اعطاء
+game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم تفعيل وظيفه مدير قيم باس";
+    Text = "By : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+end
+
+local Image =  game:GetService("Players").LocalPlayer.PlayerGui.TweenFrames.ChooseTeam.Frame.Frame.Boss
+
+Image.MouseButton1Down:Connect(runScriptWhenPlayerClicksImage)
+
+-- رساله
+game.StarterGui:SetCore("SendNotification",  {
+    Title = "لقد تم اعطاء قيم باس (مدير شاورمر !)";
+    Text = "By : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+
+
+-- 
