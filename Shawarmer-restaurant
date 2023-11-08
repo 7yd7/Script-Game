@@ -37,6 +37,51 @@ game:GetService("ReplicatedStorage").Events.BuyHouse:FireServer(ohString1, ohNum
 end
 end
 
+wait(.3)
+
+-- اعطاء جميع سيارات
+
+local player = game:GetService("Players").LocalPlayer
+local Cars = player.Cars:GetChildren()
+local allTrue = true
+
+for _, Cars in pairs(Cars) do
+    if not Cars.Value then
+        allTrue = false
+        break
+    end
+end
+
+if allTrue then
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "لديك جميع سيارات بل فعل";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
+else
+-- رساله تم اخذ
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "تم حصول جميع سيارات";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
+-- اخذ جميع سيارات
+
+for _, v in pairs(game:GetService("Players").LocalPlayer.Cars:GetChildren()) do
+local ohString1 = v.Name
+local ohNumber2 = 0
+
+game:GetService("ReplicatedStorage").BuyCar:FireServer(ohString1, ohNumber2)
+end
+end
+
+
+wait(.3)
+
 -- اعطاء فلوس
 
 -- حد اقصى 10000000000 حاليا
@@ -68,8 +113,49 @@ game.StarterGui:SetCore("SendNotification",  {
 })
 end
 
+
+wait(.3)
+
 -- قيم باس
 
+-- قيم باس سيارات
+
+local player = game:GetService("Players").LocalPlayer
+local Cars = player.Cars:GetChildren()
+local allTrue = true
+
+for _, Cars in pairs(Cars) do
+    if not Cars.Value then
+        allTrue = false
+        break
+    end
+end
+
+if allTrue then
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "لديك جميع سيارات قيم باس بل فعل";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
+else
+-- رساله تم اخذ
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "تم حصول جميع سيارات قيم باس";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
+-- اخذ جميع سيارات
+
+for _, v in pairs(game:GetService("Players").LocalPlayer.Cars:GetChildren()) do
+v.Value = true
+end
+end
+
+   wait(.3)
 -- قيم باس وظيمه المدير
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
