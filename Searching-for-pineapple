@@ -33,21 +33,6 @@ game.StarterGui:SetCore("SendNotification",  {
    })
 end
 
--- حد اقصى 50 حاليا
-   local leaderstats = game:GetService("Players").LocalPlayer.leaderstats
-
-   local value = leaderstats["\216\167\217\134\216\167\217\134\216\167\216\179"].Value
-   
-if value >= 50 then
-   -- لديك جميع اناناس
-   game.StarterGui:SetCore("SendNotification",  {
-    Title = "يبدو لديك جميع Badge/اناناس";
-    Text = "By : 7yd7";
-    Icon = "";
-    Duration = 5;
-    Callback = NotificationBindable;
-   })
-else
 
 -- الانتظار
 game.StarterGui:SetCore("SendNotification",  {
@@ -272,16 +257,39 @@ for _, badge in ipairs(badges) do
   end)
 end
 
--- نهايه badges
+-- عالم ثامن
+local workspacef = workspace:GetChildren()[4]
+local foundCar = false
+
+local badges = {}
+
+for _, child in pairs(workspacef:GetChildren()) do
+  if child.Name:match("Badge") then
+    badges[#badges + 1] = child
+  end
+end
+
+for _, badge in ipairs(badges) do
+  local success, error = pcall(function()
+    local part = badge
+
+    local originalCFrame = part.CFrame
+
+    part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+    wait(.2)
+
+    part.CFrame = originalCFrame
+  end)
+end
 
 game.StarterGui:SetCore("SendNotification",  {
- Title = "تم حصول جميع badges";
- Text = "By : 7yd7";
- Icon = "";
- Duration = 5;
- Callback = NotificationBindable;
-})
-
+  Title = "تم حصول جميع badges";
+  Text = "By : 7yd7";
+  Icon = "";
+  Duration = 5;
+  Callback = NotificationBindable;
+ })
 -- حصول اناناسة
 
 game.StarterGui:SetCore("SendNotification",  {
@@ -293,7 +301,26 @@ game.StarterGui:SetCore("SendNotification",  {
    })
 
    -- سكربت
+-- حد اقصى 65 حاليا
+local leaderstats = game:GetService("Players").LocalPlayer.leaderstats
 
+local value = leaderstats["\216\167\217\134\216\167\217\134\216\167\216\179"].Value
+
+if value >= 65 then
+-- لديك جميع اناناس
+
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "يبدو لديك جميع اناناس";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
+else
+
+
+
+   -- اناناس
    local workspacef = workspace.ToFind
 local foundCar = false
 
