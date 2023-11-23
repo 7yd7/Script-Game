@@ -1,0 +1,116 @@
+-- اخذ كثير جدا فلوس
+
+   local leaderstats = game:GetService("Players").LocalPlayer.leaderstats
+
+   local value = game:GetService("Players").LocalPlayer.leaderstats.Cash.Value
+   
+if value >= 10000000000 then
+   -- فلوس
+   game.StarterGui:SetCore("SendNotification",  {
+    Title = "لقد تم اعطاء فلوس بل فعل";
+    Text = "By : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+else
+
+local ohString1 = "Cash"
+local ohNumber2 = 100000000000000
+
+game:GetService("ReplicatedStorage").Events.AddValue:FireServer(ohString1, ohNumber2)
+
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "تم اعطاء فلوس";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
+end
+
+-- خذ جميع سيوف
+
+
+local player = game:GetService("Players").LocalPlayer
+local Swords = player.Swords:GetChildren()
+local allTrue = true
+
+for _, Swords in pairs(Swords) do
+    if not Swords.Value then
+        allTrue = false
+        break
+    end
+end
+
+if allTrue then
+    -- لديك بل فعل جميع سيوف
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "لديك جميع سيوف بل فعل";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
+else
+-- اخذ جميع سيوف
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "تم اخذ جميع سيوف";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
+-- خذ جميع سيوف
+
+for _, v in pairs(game:GetService("Players").LocalPlayer.Swords:GetChildren()) do
+
+local ohString1 = v.name
+
+game:GetService("ReplicatedStorage").Remotes.Item:FireServer(ohString1)
+end
+
+for _, v in pairs(game:GetService("Players").LocalPlayer.Swords:GetChildren()) do
+
+v.Value = true
+end
+end
+
+-- اخذ جميع مهارات في ماب
+
+
+local player = game:GetService("Players").LocalPlayer
+local Abilities = player.Abilities:GetChildren()
+local allTrue = true
+
+for _, Abilities in pairs(Abilities) do
+    if not Abilities.Value then
+        allTrue = false
+        break
+    end
+end
+
+if allTrue then
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "لديك جميع مهارات بل فعل";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
+else
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "تم اخذ جميع مهارات";
+ Text = "By : 7yd7";
+ Icon = "";
+ Duration = 5;
+ Callback = NotificationBindable;
+})
+-- اخذ جميع مهارات
+
+for _, v in pairs(game:GetService("Players").LocalPlayer.Abilities:GetChildren()) do
+
+v.Value = true
+
+end
+end
