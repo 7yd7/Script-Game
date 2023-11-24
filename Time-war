@@ -169,8 +169,6 @@ if string.sub(message, 1, #keyword) == keyword then
     end
     
     else
-
-wait(1)
     -- اذا الكائن غير موجود يتم اضافه الكائن Part
     
     game.StarterGui:SetCore("SendNotification",  {
@@ -180,6 +178,7 @@ wait(1)
       Duration = 5;
       Callback = NotificationBindable;
      })
+
      wait(1)
     -- اضافه الكائن
     local part = Instance.new("Part")
