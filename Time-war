@@ -150,9 +150,9 @@ local player = game.Players.LocalPlayer
 local chattedConnection = player.Chatted:Connect(function(message)
 local keyword = "/e far"
 if string.sub(message, 1, #keyword) == keyword then
-    local object = workspace:FindFirstChild("7yd7")
+    local object1 = workspace:FindFirstChild("7yd7")
 
-    if object then
+    if object1 then
     -- اذا الكائن موجود يتم نقله في الكائن Part
     game.StarterGui:SetCore("SendNotification",  {
       Title = "تم نقلك  مكان بعيد بنجاح";
@@ -180,26 +180,14 @@ wait(1)
       Duration = 5;
       Callback = NotificationBindable;
      })
-    
+     wait(1)
     -- اضافه الكائن
     local part = Instance.new("Part")
     part.Parent = workspace
     part.Anchored = true
     part.Position = Vector3.new(9999, 0, 0) -- تعديل الإحداثيات حسب رغبتك
     part.Size = Vector3.new(60, 3, 60) -- تعديل الحجم حسب رغبتك
-    part.BrickColor = BrickColor.new("Bright blue") -- تعديل لون الجزء حسب رغبتك
     part.Name = "7yd7"
-    
-    wait(1)
-    
-    game.StarterGui:SetCore("SendNotification",  {
-      Title = "قم بتشغيل امر مجددا/مره ثانيه";
-      Text = "By : 7yd7";
-      Icon = "";
-      Duration = 5;
-      Callback = NotificationBindable;
-     })
-    
     end    
 end
 end)
