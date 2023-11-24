@@ -19,7 +19,8 @@ if string.sub(message, 1, #keyword) == keyword then
 local time = "/e time اخذ جميع وقت/جواهر في ماب (لازم تكون خارج برا حمايه)"
 local looptime = "/e looptime اخذ تلقائي جميع وقت/جواهر في ماب (لازم تكون خارج برا حمايه)"
 local unlooptime = "/e unlooptime الغاء اخذ تلقائي"
-local invi = "/e invi يوديك مكان فوق جدا حدا حدا"
+local invi = "/e far يوديك مكان بعيد"
+local Back = "/e Back رجوع الى رسبون"
 local infoBank = "/e infobank يبين معلومات بنك شخص ( يبين لك ب شات لازم تضغط علي لاعب )"
 
 
@@ -69,6 +70,17 @@ sendSystemMessage()
 
 local function sendSystemMessage()
 	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+		Text = Back;
+        Font = Enum.Font; --font
+        Color = Color3.new(252, 250, 255); --color
+        FontSize = Enum.FontSize.Size96 --size
+	})
+end
+
+sendSystemMessage()
+
+local function sendSystemMessage()
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
 		Text = infoBank;
         Font = Enum.Font; --font
         Color = Color3.new(252, 250, 255); --color
@@ -77,6 +89,7 @@ local function sendSystemMessage()
 end
 
 sendSystemMessage()
+
   end
 end)
 
@@ -135,10 +148,57 @@ end)
 
 local player = game.Players.LocalPlayer
 local chattedConnection = player.Chatted:Connect(function(message)
-local keyword = "/e invi"
+local keyword = "/e far"
 if string.sub(message, 1, #keyword) == keyword then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-803.850708, 6.6666666666666666666669e+12, -437.828552, -0.374814272, -6.52045458e-08, -0.927099943, 5.29386739e-08, 1, -9.17341438e-08, 0.927099943, -8.34627016e-08, -0.374814272)
+    local object = workspace:FindFirstChild("7yd7")
 
+    if object then
+    -- اذا الكائن موجود يتم نقله في الكائن Part
+    game.StarterGui:SetCore("SendNotification",  {
+      Title = "تم نقلك  مكان بعيد بنجاح";
+      Text = "By : 7yd7";
+      Icon = "";
+      Duration = 5;
+      Callback = NotificationBindable;
+     })
+    
+    local part = game.Workspace:FindFirstChild("7yd7")
+    
+    if part then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = part.CFrame + Vector3.new(0, 10, 0)
+    end
+    
+    else
+    -- اذا الكائن غير موجود يتم اضافه الكائن Part
+    
+    game.StarterGui:SetCore("SendNotification",  {
+      Title = "يتم اضافه الكائن  حاليا";
+      Text = "By : 7yd7";
+      Icon = "";
+      Duration = 5;
+      Callback = NotificationBindable;
+     })
+    
+    -- اضافه الكائن
+    local part = Instance.new("Part")
+    part.Parent = workspace
+    part.Anchored = true
+    part.Position = Vector3.new(9999, 0, 0) -- تعديل الإحداثيات حسب رغبتك
+    part.Size = Vector3.new(60, 3, 60) -- تعديل الحجم حسب رغبتك
+    part.BrickColor = BrickColor.new("Bright blue") -- تعديل لون الجزء حسب رغبتك
+    part.Name = "7yd7"
+    
+    wait(1)
+    
+    game.StarterGui:SetCore("SendNotification",  {
+      Title = "قم بتشغيل امر مجددا/مره ثانيه";
+      Text = "By : 7yd7";
+      Icon = "";
+      Duration = 5;
+      Callback = NotificationBindable;
+     })
+    
+    end    
 end
 end)
 
@@ -203,6 +263,23 @@ end
 sendSystemMessage()
 end
 end)
+end
+end)
+
+local player = game.Players.LocalPlayer
+local chattedConnection = player.Chatted:Connect(function(message)
+local keyword = "/e Back"
+if string.sub(message, 1, #keyword) == keyword then
+    game.StarterGui:SetCore("SendNotification",  {
+        Title = "تم نقلك  مكان بعيد بنجاح";
+        Text = "By : 7yd7";
+        Icon = "";
+        Duration = 5;
+        Callback = NotificationBindable;
+       })
+      
+          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Spawn.SpawnLocation.CFrame + Vector3.new(0, 10, 0)
+
 end
 end)
 
