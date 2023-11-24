@@ -179,7 +179,6 @@ if string.sub(message, 1, #keyword) == keyword then
       Callback = NotificationBindable;
      })
 
-     wait(1)
     -- اضافه الكائن
     local part = Instance.new("Part")
     part.Parent = workspace
