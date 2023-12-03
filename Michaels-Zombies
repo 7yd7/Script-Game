@@ -1,0 +1,168 @@
+-- الماب اساسي لذي سوف يتم نقلك الماب
+workspace.FallenPartsDestroyHeight = -50000
+local placeId = game.PlaceId
+
+
+if placeId == 8054462345 then
+
+local ohNumber1 = 3
+local ohString2 = "Lighthouse"
+
+game:GetService("ReplicatedStorage").Remotes.MenuRequest:InvokeServer(ohNumber1, ohString2)
+wait(.5)
+
+
+local player = game.Players.localPlayer
+
+     player:Kick(tostring("-----------------------------------------------------------------------سوف يتم نقلك الى ماب انتظر قم بتشغيل سكربت مجددا بعد نقلك"))
+
+
+     -- مابات متاحه لذي داخل الماب
+ elseif placeId == 9544666096 then
+
+-- قتل من بعيد سكين
+
+local StarterGui = game:GetService("StarterGui")
+local bindable = Instance.new("BindableFunction")
+
+function bindable.OnInvoke(response)
+    if response == "نعم" then
+        local LocalPlayer = game.Players.LocalPlayer
+
+        getgenv().run_loopy_pls2 = true
+        
+        function is_within_distance(zombie, dist)
+            if zombie and LocalPlayer.Character and zombie:FindFirstChild("HumanoidRootPart") and LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                return (LocalPlayer.Character.HumanoidRootPart.Position - zombie.HumanoidRootPart.Position).Magnitude <= (dist or 30)
+            end
+            return false
+        end
+        
+        
+        while task.wait(.1) and run_loopy_pls2 do
+            for i,v in pairs(workspace.Ignore.Zombies:GetChildren()) do
+                if v and v:FindFirstChild("HumanoidRootPart") and is_within_distance(v, 80) then
+                    game:GetService("ReplicatedStorage").Framework.Remotes.KnifeHitbox:FireServer(v)
+                end
+            end
+        end       
+        
+        game.StarterGui:SetCore("SendNotification",  {
+            Title = "تم تشتغيل قتل زومبي من بعيد";
+            Text = "By : 7yd7";
+            Icon = "";
+            Duration = 5;
+            Callback = NotificationBindable;
+           })
+    elseif response == "لا" then
+     
+    end
+end
+
+StarterGui:SetCore("SendNotification", {
+    Title = "تشغيل قتل زومبي من بعيد",
+    Text = "اذا تريد اضغط نعم اذا كنت ما تريد اضغط لا",
+    Duration = math.huge,
+    Callback = bindable,
+    Button1 = "نعم",
+    Button2 = "لا"
+})
+
+
+
+-- قتل زومبي تلقاءي
+local StarterGui = game:GetService("StarterGui")
+local bindable = Instance.new("BindableFunction")
+
+function bindable.OnInvoke(response)
+    if response == "نعم" then
+        shared.zombie = true
+
+        local StarterGui = game:GetService("StarterGui") -- not sure why you used CoreGui
+        local bindable = Instance.new("BindableFunction")
+        
+        function bindable.OnInvoke(response)
+
+            shared.zombie = false
+
+            game.StarterGui:SetCore("SendNotification",  {
+                Title = "تم ايقاف نقل زومبي تلقائي";
+                Text = "By : 7yd7";
+                Icon = "";
+                Duration = 5;
+                Callback = NotificationBindable;
+               })
+        end
+        
+        StarterGui:SetCore("SendNotification", {
+            Title = "ايقاف نقل زومبي تلقائي",
+            Text = "By : 7yd7",
+            Duration = math.huge,
+            Callback = bindable,
+            Button1 = "نعم",
+        })
+
+    elseif response == "لا" then
+
+    end
+end
+
+StarterGui:SetCore("SendNotification", {
+    Title = "تشغيل نقل زومبي تلقائي",
+    Text = "اذا تريد اضغط نعم اذا كنت ما تريد اضغط لا",
+    Duration = math.huge,
+    Callback = bindable,
+    Button1 = "نعم",
+    Button2 = "لا"
+})
+
+
+
+-- نقل زومبي تلقائي
+local zombies = game.Workspace.Ignore.Zombies:GetChildren()
+local player = game.Players.LocalPlayer.Character
+
+
+while wait() do
+    if shared.zombie == true then
+
+    zombies = game.Workspace.Ignore.Zombies:GetChildren()
+
+    for _, zombie in ipairs(zombies) do
+        if zombie then
+            local head = zombie.HumanoidRootPart
+
+            local offset = Vector3.new(0, 3, 0)
+
+            player.HumanoidRootPart.CFrame = head.CFrame + offset
+
+            isZombieAlive = zombie.Humanoid.Health > 0
+
+            break
+        end
+    end
+
+    wait(0.4)
+
+    if not isZombieAlive then
+        for _, zombie in ipairs(zombies) do
+            if zombie then
+                isZombieAlive = zombie.Humanoid.Health > 0
+                break
+            end
+        end
+
+        if isZombieAlive then
+            local head = zombie.HumanoidRootPart
+
+            local offset = Vector3.new(0, 3, 0)
+
+            player.HumanoidRootPart.CFrame = head.CFrame + offset
+        end
+    end
+end
+
+    end
+else
+
+end
