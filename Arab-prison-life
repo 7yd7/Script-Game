@@ -1,6 +1,6 @@
 local function sendSystemMessage()
     game.StarterGui:SetCore("ChatMakeSystemMessage", {
-    Text = "[7yd7] : .cmde معرفه جميع اوامر"; -- النص سكربت يلي يكتبه شات فقط يبان عندك
+    Text = "[7yd7] : /e cmde معرفه جميع اوامر"; -- النص سكربت يلي يكتبه شات فقط يبان عندك
         Font = Enum.Font; --font
         Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
         FontSize = Enum.FontSize.Size96 --size
@@ -11,12 +11,12 @@ sendSystemMessage()
 
 local player = game.Players.LocalPlayer
 local chattedConnection = player.Chatted:Connect(function(message)
-local keyword = ".cmde"
+local keyword = "/e cmde"
 if string.sub(message, 1, #keyword) == keyword then
 
     local function sendSystemMessage()
         game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[7yd7] : .kill قتل حط اسم لاعب"; -- النص سكربت يلي يكتبه شات فقط يبان عندك
+        Text = "[7yd7] : /e kill قتل حط اسم لاعب"; -- النص سكربت يلي يكتبه شات فقط يبان عندك
             Font = Enum.Font; --font
             Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
             FontSize = Enum.FontSize.Size96 --size
@@ -27,7 +27,7 @@ if string.sub(message, 1, #keyword) == keyword then
 
     local function sendSystemMessage()
         game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[7yd7] : .kill all قتل جميع لاعبين"  ; 
+        Text = "[7yd7] : /e kill all قتل جميع لاعبين"  ; 
             Font = Enum.Font; --font
             Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
             FontSize = Enum.FontSize.Size96 --size
@@ -38,7 +38,7 @@ if string.sub(message, 1, #keyword) == keyword then
 
     local function sendSystemMessage()
         game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[7yd7] : .godmode ما تموت"  ; 
+        Text = "[7yd7] : /e godmode ما تموت"  ; 
             Font = Enum.Font; --font
             Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
             FontSize = Enum.FontSize.Size96 --size
@@ -49,7 +49,7 @@ if string.sub(message, 1, #keyword) == keyword then
 
     local function sendSystemMessage()
         game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[7yd7] : .getalltools اخذ جميع اغراض (تقريبا)"  ; 
+        Text = "[7yd7] : /e getalltools اخذ جميع اغراض (تقريبا)"  ; 
             Font = Enum.Font; --font
             Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
             FontSize = Enum.FontSize.Size96 --size
@@ -60,7 +60,7 @@ if string.sub(message, 1, #keyword) == keyword then
 
     local function sendSystemMessage()
         game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[7yd7] : .infammos (لا تمسك الغرض) رصاص لا محدود"  ; 
+        Text = "[7yd7] : /e infammos (لا تمسك الغرض) رصاص لا محدود"  ; 
             Font = Enum.Font; --font
             Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
             FontSize = Enum.FontSize.Size96 --size
@@ -71,7 +71,7 @@ if string.sub(message, 1, #keyword) == keyword then
 
     local function sendSystemMessage()
         game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[7yd7] : .arrest all سجن جميع لاعبين (مخالفين او طالعين برا سجن)"  ; 
+        Text = "[7yd7] : /e arrest all سجن جميع لاعبين (مخالفين او طالعين برا سجن)"  ; 
             Font = Enum.Font; --font
             Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
             FontSize = Enum.FontSize.Size96 --size
@@ -82,7 +82,7 @@ if string.sub(message, 1, #keyword) == keyword then
 
     local function sendSystemMessage()
         game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[7yd7] : .deldoor حذف جميع ابواب"  ; 
+        Text = "[7yd7] : /e deldoor حذف جميع ابواب"  ; 
             Font = Enum.Font; --font
             Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
             FontSize = Enum.FontSize.Size96 --size
@@ -101,7 +101,7 @@ end)
 -- تحديد اسم لاعب
 local player = game.Players.LocalPlayer
 local chattedConnection = player.Chatted:Connect(function(message)
-  local keyword = ".kill "
+  local keyword = "/e kill "
   if string.sub(message, 1, #keyword) == keyword then
     local Name = string.sub(message, #keyword + 1)
     local players = game:GetService("Players")
@@ -123,7 +123,7 @@ end)
 -- قتل جميع لاعبين بل ماب
 local player = game.Players.LocalPlayer
 local chattedConnection = player.Chatted:Connect(function(message)
-local keyword = ".kill all"
+local keyword = "/e kill all"
 if string.sub(message, 1, #keyword) == keyword then
 
 for i,v in pairs(game.Players:GetPlayers()) do
@@ -143,7 +143,7 @@ end)
 -- ما تموت
 local player = game.Players.LocalPlayer
 local chattedConnection = player.Chatted:Connect(function(message)
-local keyword = ".godmode"
+local keyword = "/e godmode"
 if string.sub(message, 1, #keyword) == keyword then
 
     local ohInstance1 = game.Players.LocalPlayer.Character.Humanoid
@@ -158,7 +158,7 @@ end)
 -- اخذ جميع اغراض
 local player = game.Players.LocalPlayer
 local chattedConnection = player.Chatted:Connect(function(message)
-local keyword = ".getalltools"
+local keyword = "/e getalltools"
 if string.sub(message, 1, #keyword) == keyword then
 
     fireclickdetector(workspace.Prison_ITEMS.giver["AK-47"].ClickDetector)
@@ -175,7 +175,7 @@ end)
 -- رصاص لا محدود
 local player = game.Players.LocalPlayer
 local chattedConnection = player.Chatted:Connect(function(message)
-local keyword = ".infammos"
+local keyword = "/e infammos"
 if string.sub(message, 1, #keyword) == keyword then
 
 for _, infAmmos in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
@@ -189,7 +189,7 @@ end)
 -- سجن جميع لاعبين ( مخالفين او طالعين برا سجن )
 local player = game.Players.LocalPlayer
 local chattedConnection = player.Chatted:Connect(function(message)
-local keyword = ".arrest all"
+local keyword = "/e arrest all"
 if string.sub(message, 1, #keyword) == keyword then
 
 
@@ -209,7 +209,7 @@ end)
 -- حذف جميع ابواب
 local player = game.Players.LocalPlayer
 local chattedConnection = player.Chatted:Connect(function(message)
-local keyword = ".deldoor"
+local keyword = "/e deldoor"
 if string.sub(message, 1, #keyword) == keyword then
 
     local Doors = workspace.Doors:GetChildren()
