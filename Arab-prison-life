@@ -27,7 +27,7 @@ if string.sub(message, 1, #keyword) == keyword then
 
     local function sendSystemMessage()
         game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[7yd7] : /e kill all قتل جميع لاعبين"  ; 
+        Text = "[7yd7] : /e kill all (تحذير يوجد بان بل امر) قتل جميع لاعبين"  ; 
             Font = Enum.Font; --font
             Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
             FontSize = Enum.FontSize.Size96 --size
@@ -35,6 +35,61 @@ if string.sub(message, 1, #keyword) == keyword then
     end
     
     sendSystemMessage()
+
+    local function sendSystemMessage()
+      game.StarterGui:SetCore("ChatMakeSystemMessage", {
+      Text = "[7yd7] : /e kill inm قتل لاعبين بل تيم حرامي"  ; 
+          Font = Enum.Font; --font
+          Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+          FontSize = Enum.FontSize.Size96 --size
+      })
+  end
+  
+  sendSystemMessage()
+
+  local function sendSystemMessage()
+    game.StarterGui:SetCore("ChatMakeSystemMessage", {
+    Text = "[7yd7] : /e kill gua قتل لاعبين بل تيم شرطي"  ; 
+        Font = Enum.Font; --font
+        Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+        FontSize = Enum.FontSize.Size96 --size
+    })
+end
+
+sendSystemMessage()
+
+local function sendSystemMessage()
+  game.StarterGui:SetCore("ChatMakeSystemMessage", {
+  Text = "[7yd7] : /e kill cri قتل لاعبين بل تيم مجرم"  ; 
+      Font = Enum.Font; --font
+      Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+      FontSize = Enum.FontSize.Size96 --size
+  })
+end
+
+sendSystemMessage()
+
+local function sendSystemMessage()
+  game.StarterGui:SetCore("ChatMakeSystemMessage", {
+  Text = "[7yd7] : /e arrest all سجن جميع لاعبين (مخالفين او طالعين برا سجن)"  ; 
+      Font = Enum.Font; --font
+      Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+      FontSize = Enum.FontSize.Size96 --size
+  })
+end
+
+sendSystemMessage()
+
+local function sendSystemMessage()
+  game.StarterGui:SetCore("ChatMakeSystemMessage", {
+  Text = "・"  ; 
+      Font = Enum.Font; --font
+      Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+      FontSize = Enum.FontSize.Size96 --size
+  })
+end
+
+sendSystemMessage()
 
     local function sendSystemMessage()
         game.StarterGui:SetCore("ChatMakeSystemMessage", {
@@ -61,17 +116,6 @@ if string.sub(message, 1, #keyword) == keyword then
     local function sendSystemMessage()
         game.StarterGui:SetCore("ChatMakeSystemMessage", {
         Text = "[7yd7] : /e infammos (لا تمسك الغرض) رصاص لا محدود"  ; 
-            Font = Enum.Font; --font
-            Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
-            FontSize = Enum.FontSize.Size96 --size
-        })
-    end
-    
-    sendSystemMessage()
-
-    local function sendSystemMessage()
-        game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[7yd7] : /e arrest all سجن جميع لاعبين (مخالفين او طالعين برا سجن)"  ; 
             Font = Enum.Font; --font
             Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
             FontSize = Enum.FontSize.Size96 --size
@@ -128,6 +172,66 @@ if string.sub(message, 1, #keyword) == keyword then
 
 for i,v in pairs(game.Players:GetPlayers()) do
     if v.Name ~= game.Players.LocalPlayer.Name then
+
+local ohInstance1 = v.Character.Humanoid
+local ohNumber2 = 1000000000000
+
+game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)
+
+    end
+end
+
+  end
+end)
+
+-- قتل لاعبين بل تيم حرامي
+local player = game.Players.LocalPlayer
+local chattedConnection = player.Chatted:Connect(function(message)
+local keyword = "/e kill inm"
+if string.sub(message, 1, #keyword) == keyword then
+
+  for i,v in pairs(game:GetService("Teams").Inmates:GetPlayers()) do
+    if v ~= game.Players.LocalPlayer then
+
+local ohInstance1 = v.Character.Humanoid
+local ohNumber2 = 1000000000000
+
+game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)
+
+    end
+end
+
+  end
+end)
+
+-- قتل لاعبين بل تيم شرطي
+local player = game.Players.LocalPlayer
+local chattedConnection = player.Chatted:Connect(function(message)
+local keyword = "/e kill gua"
+if string.sub(message, 1, #keyword) == keyword then
+
+  for i,v in pairs(game:GetService("Teams").Guards:GetPlayers()) do
+    if v ~= game.Players.LocalPlayer then
+
+local ohInstance1 = v.Character.Humanoid
+local ohNumber2 = 1000000000000
+
+game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)
+
+    end
+end
+
+  end
+end)
+
+-- قتل لاعبين بل تيم مجرم
+local player = game.Players.LocalPlayer
+local chattedConnection = player.Chatted:Connect(function(message)
+local keyword = "/e kill cri"
+if string.sub(message, 1, #keyword) == keyword then
+
+  for i,v in pairs(game:GetService("Teams").Criminals:GetPlayers()) do
+    if v ~= game.Players.LocalPlayer then
 
 local ohInstance1 = v.Character.Humanoid
 local ohNumber2 = 1000000000000
@@ -224,7 +328,7 @@ game.StarterGui:SetCore("SendNotification",  {
 })
     else
         game.StarterGui:SetCore("SendNotification",  {
-            Title = "يتم حذف جميع ابواب";
+            Title = "تم حذف جميع ابواب";
             Text = "by : 7yd7";
             Icon = "";
             Duration = 5;
