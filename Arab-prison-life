@@ -484,7 +484,7 @@ coroutine.wrap(function()
       for i, v in pairs(game.Players:GetPlayers()) do
         if v ~= game.Players.LocalPlayer then
           local Distance = (v.Character:FindFirstChildOfClass("Part").Position - game.Players.LocalPlayer.Character:FindFirstChildOfClass("Part").Position).magnitude
-          if Distance <= 20 then
+          if Distance <= 10 then
             for i = 1, 25 do
               local ohInstance1 = v.Character.Humanoid
               local ohNumber2 = 1000000000000
