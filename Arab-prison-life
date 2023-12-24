@@ -571,10 +571,7 @@ local keyword = ".getalltools"
 if string.sub(message, 1, #keyword) == keyword then
 
   fireclickdetector(workspace.Prison_ITEMS.giver["AK-47"].ClickDetector)
-  fireclickdetector(workspace.Prison_ITEMS.giver.FAL.ClickDetector)
   fireclickdetector(workspace.Prison_ITEMS.giver.M9.ClickDetector)
-  fireclickdetector(workspace.Prison_ITEMS.giver.MP5.ClickDetector)
-  fireclickdetector(workspace.Prison_ITEMS.giver.MiniGun.ClickDetector)
   fireclickdetector(workspace.Prison_ITEMS.giver["Remington 870"].ClickDetector)
   
   
