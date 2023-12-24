@@ -1,12 +1,12 @@
 
 
 local function sendSystemMessage()
-    game.StarterGui:SetCore("ChatMakeSystemMessage", {
-    Text = "[7yd7] : .cmds معرفه جميع اوامر"; -- النص سكربت يلي يكتبه شات فقط يبان عندك
-        Font = Enum.Font; --font
-        Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
-        FontSize = Enum.FontSize.Size96 --size
-    })
+  game.StarterGui:SetCore("ChatMakeSystemMessage", {
+  Text = "[7yd7] : .cmds معرفه جميع اوامر"; -- النص سكربت يلي يكتبه شات فقط يبان عندك
+      Font = Enum.Font; --font
+      Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+      FontSize = Enum.FontSize.Size96 --size
+  })
 end
 
 sendSystemMessage()
@@ -16,31 +16,20 @@ local chattedConnection = player.Chatted:Connect(function(message)
 local keyword = ".cmds"
 if string.sub(message, 1, #keyword) == keyword then
 
-    local function sendSystemMessage()
-        game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[7yd7] : .kill قتل حط اسم لاعب"; -- النص سكربت يلي يكتبه شات فقط يبان عندك
-            Font = Enum.Font; --font
-            Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
-            FontSize = Enum.FontSize.Size96 --size
-        })
-    end
-    
-    sendSystemMessage()
-
-    local function sendSystemMessage()
-        game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[7yd7] : .kill all (تحذير يوجد بان بل امر) قتل جميع لاعبين"  ; 
-            Font = Enum.Font; --font
-            Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
-            FontSize = Enum.FontSize.Size96 --size
-        })
-    end
-    
-    sendSystemMessage()
-
-    local function sendSystemMessage()
+  local function sendSystemMessage()
       game.StarterGui:SetCore("ChatMakeSystemMessage", {
-      Text = "[7yd7] : .kill inm قتل لاعبين بل تيم حرامي"  ; 
+      Text = "[7yd7] : .kill قتل حط اسم لاعب"; -- النص سكربت يلي يكتبه شات فقط يبان عندك
+          Font = Enum.Font; --font
+          Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+          FontSize = Enum.FontSize.Size96 --size
+      })
+  end
+  
+  sendSystemMessage()
+
+  local function sendSystemMessage()
+      game.StarterGui:SetCore("ChatMakeSystemMessage", {
+      Text = "[7yd7] : .kill all (تحذير يوجد بان بل امر) قتل جميع لاعبين"  ; 
           Font = Enum.Font; --font
           Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
           FontSize = Enum.FontSize.Size96 --size
@@ -51,7 +40,7 @@ if string.sub(message, 1, #keyword) == keyword then
 
   local function sendSystemMessage()
     game.StarterGui:SetCore("ChatMakeSystemMessage", {
-    Text = "[7yd7] : .kill gua قتل لاعبين بل تيم شرطي"  ; 
+    Text = "[7yd7] : .kill inm قتل لاعبين بل تيم حرامي"  ; 
         Font = Enum.Font; --font
         Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
         FontSize = Enum.FontSize.Size96 --size
@@ -62,7 +51,7 @@ sendSystemMessage()
 
 local function sendSystemMessage()
   game.StarterGui:SetCore("ChatMakeSystemMessage", {
-  Text = "[7yd7] : .kill cri قتل لاعبين بل تيم مجرم"  ; 
+  Text = "[7yd7] : .kill gua قتل لاعبين بل تيم شرطي"  ; 
       Font = Enum.Font; --font
       Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
       FontSize = Enum.FontSize.Size96 --size
@@ -72,34 +61,45 @@ end
 sendSystemMessage()
 
 local function sendSystemMessage()
-  game.StarterGui:SetCore("ChatMakeSystemMessage", {
-  Text = "[7yd7] : .killaura قتل لما يلمس لاعب"  ; 
-      Font = Enum.Font; --font
-      Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
-      FontSize = Enum.FontSize.Size96 --size
-  })
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+Text = "[7yd7] : .kill cri قتل لاعبين بل تيم مجرم"  ; 
+    Font = Enum.Font; --font
+    Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+    FontSize = Enum.FontSize.Size96 --size
+})
 end
 
 sendSystemMessage()
 
 local function sendSystemMessage()
-  game.StarterGui:SetCore("ChatMakeSystemMessage", {
-  Text = "[7yd7] : .unkillaura ايقاف قتل لما يلمس لاعب"  ; 
-      Font = Enum.Font; --font
-      Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
-      FontSize = Enum.FontSize.Size96 --size
-  })
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+Text = "[7yd7] : .killaura قتل لما يلمس لاعب"  ; 
+    Font = Enum.Font; --font
+    Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+    FontSize = Enum.FontSize.Size96 --size
+})
 end
 
 sendSystemMessage()
 
 local function sendSystemMessage()
-  game.StarterGui:SetCore("ChatMakeSystemMessage", {
-  Text = "[7yd7] : .arrest all سجن جميع لاعبين (مخالفين او طالعين برا سجن)"  ; 
-      Font = Enum.Font; --font
-      Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
-      FontSize = Enum.FontSize.Size96 --size
-  })
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+Text = "[7yd7] : .unkillaura ايقاف قتل لما يلمس لاعب"  ; 
+    Font = Enum.Font; --font
+    Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+    FontSize = Enum.FontSize.Size96 --size
+})
+end
+
+sendSystemMessage()
+
+local function sendSystemMessage()
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+Text = "[7yd7] : .arrest all سجن جميع لاعبين (مخالفين او طالعين برا سجن)"  ; 
+    Font = Enum.Font; --font
+    Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+    FontSize = Enum.FontSize.Size96 --size
+})
 end
 
 sendSystemMessage()
@@ -111,68 +111,168 @@ local function sendSystemMessage()
       Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
       FontSize = Enum.FontSize.Size96 --size
   })
-end
+  end
+  
+  sendSystemMessage()
 
-sendSystemMessage()
-
-    local function sendSystemMessage()
-        game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[7yd7] : .godmode ما تموت"  ; 
-            Font = Enum.Font; --font
-            Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
-            FontSize = Enum.FontSize.Size96 --size
-        })
+  local function sendSystemMessage()
+    game.StarterGui:SetCore("ChatMakeSystemMessage", {
+    Text = "[7yd7] : .loopkill all (تحذير يوجد بان بل امر) تكرار قتل جميع لاعبين "  ; 
+        Font = Enum.Font; --font
+        Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+        FontSize = Enum.FontSize.Size96 --size
+    })
     end
     
     sendSystemMessage()
 
-    local function sendSystemMessage()
-        game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[7yd7] : .getalltools اخذ جميع اغراض (تقريبا)"  ; 
-            Font = Enum.Font; --font
-            Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
-            FontSize = Enum.FontSize.Size96 --size
-        })
-    end
-    
-    sendSystemMessage()
-
-    local function sendSystemMessage()
-        game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[7yd7] : .infammos (لا تمسك الغرض) رصاص لا محدود"  ; 
-            Font = Enum.Font; --font
-            Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
-            FontSize = Enum.FontSize.Size96 --size
-        })
-    end
-    
-    sendSystemMessage()
-
-    local function sendSystemMessage()
-        game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[7yd7] : .deldoor حذف جميع ابواب"  ; 
-            Font = Enum.Font; --font
-            Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
-            FontSize = Enum.FontSize.Size96 --size
-        })
-    end
-    
-    sendSystemMessage()
-    
     local function sendSystemMessage()
       game.StarterGui:SetCore("ChatMakeSystemMessage", {
-      Text = "・"  ; 
+      Text = "[7yd7] : .loopkill inm تكرار قتل لاعبين بل تيم حرامي"  ; 
           Font = Enum.Font; --font
           Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
           FontSize = Enum.FontSize.Size96 --size
       })
+  end
+  
+  sendSystemMessage()
+
+  local function sendSystemMessage()
+    game.StarterGui:SetCore("ChatMakeSystemMessage", {
+    Text = "[7yd7] : .loopkill gua تكرار قتل لاعبين بل تيم شرطي"  ; 
+        Font = Enum.Font; --font
+        Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+        FontSize = Enum.FontSize.Size96 --size
+    })
+end
+
+sendSystemMessage()
+
+local function sendSystemMessage()
+  game.StarterGui:SetCore("ChatMakeSystemMessage", {
+  Text = "[7yd7] : .loopkill cri تكرار قتل لاعبين بل تيم مجرم"  ; 
+      Font = Enum.Font; --font
+      Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+      FontSize = Enum.FontSize.Size96 --size
+  })
+end
+
+sendSystemMessage()
+
+local function sendSystemMessage()
+  game.StarterGui:SetCore("ChatMakeSystemMessage", {
+  Text = "[7yd7] : .looparrest all تكرار سجن جميع لاعبين (مخالفين او طالعين برا سجن)"  ; 
+      Font = Enum.Font; --font
+      Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+      FontSize = Enum.FontSize.Size96 --size
+  })
+  end
+  
+  sendSystemMessage()
+
+    local function sendSystemMessage()
+      game.StarterGui:SetCore("ChatMakeSystemMessage", {
+      Text = "[7yd7] : .unloopkill all (تحذير يوجد بان بل امر) ايقاف قتل جميع لاعبين "  ; 
+          Font = Enum.Font; --font
+          Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+          FontSize = Enum.FontSize.Size96 --size
+      })
+      end
+      
+      sendSystemMessage()
+
+      local function sendSystemMessage()
+        game.StarterGui:SetCore("ChatMakeSystemMessage", {
+        Text = "[7yd7] : .unloopkill inm ايقاف قتل لاعبين بل تيم حرامي"  ; 
+            Font = Enum.Font; --font
+            Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+            FontSize = Enum.FontSize.Size96 --size
+        })
     end
     
     sendSystemMessage()
 
     local function sendSystemMessage()
       game.StarterGui:SetCore("ChatMakeSystemMessage", {
-      Text = "[7yd7] : .team inm تيم حرامي"  ; 
+      Text = "[7yd7] : .unloopkill gua ايقاف قتل لاعبين بل تيم شرطي"  ; 
+          Font = Enum.Font; --font
+          Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+          FontSize = Enum.FontSize.Size96 --size
+      })
+  end
+  
+  sendSystemMessage()
+
+  local function sendSystemMessage()
+    game.StarterGui:SetCore("ChatMakeSystemMessage", {
+    Text = "[7yd7] : .unloopkill cri ايقاف قتل لاعبين بل تيم مجرم"  ; 
+        Font = Enum.Font; --font
+        Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+        FontSize = Enum.FontSize.Size96 --size
+    })
+end
+
+sendSystemMessage()
+
+local function sendSystemMessage()
+  game.StarterGui:SetCore("ChatMakeSystemMessage", {
+  Text = "[7yd7] : .unlooparrest all ايقاف سجن جميع لاعبين (مخالفين او طالعين برا سجن)"  ; 
+      Font = Enum.Font; --font
+      Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+      FontSize = Enum.FontSize.Size96 --size
+  })
+  end
+  
+  sendSystemMessage()
+
+
+local function sendSystemMessage()
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+Text = "・"  ; 
+    Font = Enum.Font; --font
+    Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+    FontSize = Enum.FontSize.Size96 --size
+})
+end
+
+sendSystemMessage()
+
+  local function sendSystemMessage()
+      game.StarterGui:SetCore("ChatMakeSystemMessage", {
+      Text = "[7yd7] : .godmode ما تموت"  ; 
+          Font = Enum.Font; --font
+          Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+          FontSize = Enum.FontSize.Size96 --size
+      })
+  end
+  
+  sendSystemMessage()
+
+  local function sendSystemMessage()
+      game.StarterGui:SetCore("ChatMakeSystemMessage", {
+      Text = "[7yd7] : .getalltools اخذ جميع اغراض (تقريبا)"  ; 
+          Font = Enum.Font; --font
+          Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+          FontSize = Enum.FontSize.Size96 --size
+      })
+  end
+  
+  sendSystemMessage()
+
+  local function sendSystemMessage()
+      game.StarterGui:SetCore("ChatMakeSystemMessage", {
+      Text = "[7yd7] : .infammos (لا تمسك الغرض) رصاص لا محدود"  ; 
+          Font = Enum.Font; --font
+          Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+          FontSize = Enum.FontSize.Size96 --size
+      })
+  end
+  
+  sendSystemMessage()
+
+  local function sendSystemMessage()
+      game.StarterGui:SetCore("ChatMakeSystemMessage", {
+      Text = "[7yd7] : .deldoor حذف جميع ابواب"  ; 
           Font = Enum.Font; --font
           Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
           FontSize = Enum.FontSize.Size96 --size
@@ -183,7 +283,7 @@ sendSystemMessage()
   
   local function sendSystemMessage()
     game.StarterGui:SetCore("ChatMakeSystemMessage", {
-    Text = "[7yd7] : .team gua تيم شرطي"  ; 
+    Text = "・"  ; 
         Font = Enum.Font; --font
         Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
         FontSize = Enum.FontSize.Size96 --size
@@ -191,19 +291,41 @@ sendSystemMessage()
   end
   
   sendSystemMessage()
-  
+
   local function sendSystemMessage()
+    game.StarterGui:SetCore("ChatMakeSystemMessage", {
+    Text = "[7yd7] : .team inm تيم حرامي"  ; 
+        Font = Enum.Font; --font
+        Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+        FontSize = Enum.FontSize.Size96 --size
+    })
+end
+
+sendSystemMessage()
+
+local function sendSystemMessage()
   game.StarterGui:SetCore("ChatMakeSystemMessage", {
-  Text = "[7yd7] : .team cri تيم مجرم"  ; 
+  Text = "[7yd7] : .team gua تيم شرطي"  ; 
       Font = Enum.Font; --font
       Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
       FontSize = Enum.FontSize.Size96 --size
   })
-  end
-  
-  sendSystemMessage()
+end
 
-  end
+sendSystemMessage()
+
+local function sendSystemMessage()
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+Text = "[7yd7] : .team cri تيم مجرم"  ; 
+    Font = Enum.Font; --font
+    Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
+    FontSize = Enum.FontSize.Size96 --size
+})
+end
+
+sendSystemMessage()
+
+end
 end)
 
 
@@ -213,23 +335,23 @@ end)
 -- تحديد اسم لاعب
 local player = game.Players.LocalPlayer
 local chattedConnection = player.Chatted:Connect(function(message)
-  local keyword = ".kill "
-  if string.sub(message, 1, #keyword) == keyword then
-    local Name = string.sub(message, #keyword + 1)
-    local players = game:GetService("Players")
-    for _, player in ipairs(players:GetPlayers()) do
-      if string.sub(player.Name, 1, #Name) == Name then
-        v = player.Name
-        break
-      end
+local keyword = ".kill "
+if string.sub(message, 1, #keyword) == keyword then
+  local Name = string.sub(message, #keyword + 1)
+  local players = game:GetService("Players")
+  for _, player in ipairs(players:GetPlayers()) do
+    if string.sub(player.Name, 1, #Name) == Name then
+      v = player.Name
+      break
     end
-
-    local ohInstance1 = game.Players[v].Character.Humanoid
-    local ohNumber2 = 1000000000000
-    
-    game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)
-
   end
+
+  local ohInstance1 = game.Players[v].Character.Humanoid
+  local ohNumber2 = 1000000000000
+  
+  game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)
+
+end
 end)
 
 -- قتل جميع لاعبين بل ماب
@@ -239,17 +361,17 @@ local keyword = ".kill all"
 if string.sub(message, 1, #keyword) == keyword then
 
 for i,v in pairs(game.Players:GetPlayers()) do
-    if v.Name ~= game.Players.LocalPlayer.Name then
+  if v.Name ~= game.Players.LocalPlayer.Name then
 
 local ohInstance1 = v.Character.Humanoid
 local ohNumber2 = 1000000000000
 
 game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)
 
-    end
+  end
 end
 
-  end
+end
 end)
 
 -- قتل لاعبين بل تيم حرامي
@@ -258,18 +380,18 @@ local chattedConnection = player.Chatted:Connect(function(message)
 local keyword = ".kill inm"
 if string.sub(message, 1, #keyword) == keyword then
 
-  for i,v in pairs(game:GetService("Teams").Inmates:GetPlayers()) do
-    if v ~= game.Players.LocalPlayer then
+for i,v in pairs(game:GetService("Teams").Inmates:GetPlayers()) do
+  if v ~= game.Players.LocalPlayer then
 
 local ohInstance1 = v.Character.Humanoid
 local ohNumber2 = 1000000000000
 
 game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)
 
-    end
+  end
 end
 
-  end
+end
 end)
 
 -- قتل لاعبين بل تيم شرطي
@@ -278,18 +400,18 @@ local chattedConnection = player.Chatted:Connect(function(message)
 local keyword = ".kill gua"
 if string.sub(message, 1, #keyword) == keyword then
 
-  for i,v in pairs(game:GetService("Teams").Guards:GetPlayers()) do
-    if v ~= game.Players.LocalPlayer then
+for i,v in pairs(game:GetService("Teams").Guards:GetPlayers()) do
+  if v ~= game.Players.LocalPlayer then
 
 local ohInstance1 = v.Character.Humanoid
 local ohNumber2 = 1000000000000
 
 game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)
 
-    end
+  end
 end
 
-  end
+end
 end)
 
 -- قتل لاعبين بل تيم مجرم
@@ -298,29 +420,30 @@ local chattedConnection = player.Chatted:Connect(function(message)
 local keyword = ".kill cri"
 if string.sub(message, 1, #keyword) == keyword then
 
-  for i,v in pairs(game:GetService("Teams").Criminals:GetPlayers()) do
-    if v ~= game.Players.LocalPlayer then
+for i,v in pairs(game:GetService("Teams").Criminals:GetPlayers()) do
+  if v ~= game.Players.LocalPlayer then
 
 local ohInstance1 = v.Character.Humanoid
 local ohNumber2 = 1000000000000
 
 game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)
 
-    end
+  end
 end
 
-  end
+end
 end)
+
 
 -- قتل لما يلمس لاعب حجم معين
 local player = game.Players.LocalPlayer
 local chattedConnection = player.Chatted:Connect(function(message)
 local keyword = ".killaura"
 if string.sub(message, 1, #keyword) == keyword then
- 
-  getgenv().Kill_Aura = true
-  
-  end
+
+getgenv().Kill_Aura = true
+
+end
 end)
 
 -- ايقاف قتل لما يلمس لاعب حجم معين 
@@ -329,9 +452,101 @@ local chattedConnection = player.Chatted:Connect(function(message)
 local keyword = ".unkillaura"
 if string.sub(message, 1, #keyword) == keyword then
 
-  getgenv().Kill_Aura = false
-  
-  end
+getgenv().Kill_Aura = false
+
+end
+end)
+
+-- loop
+
+-- تكرار قتل جميع لاعبين بل ماب 
+local player = game.Players.LocalPlayer
+local chattedConnection = player.Chatted:Connect(function(message)
+local keyword = ".loopkill all"
+if string.sub(message, 1, #keyword) == keyword then
+
+  getgenv().Killall = true
+
+end
+end)
+
+-- تكرار قتل جميع حرامي لاعبين
+local player = game.Players.LocalPlayer
+local chattedConnection = player.Chatted:Connect(function(message)
+local keyword = ".loopkill inm"
+if string.sub(message, 1, #keyword) == keyword then
+
+  getgenv().killInm = true
+
+end
+end)
+
+-- تكرار قتل جميع شرطي لاعبين
+local player = game.Players.LocalPlayer
+local chattedConnection = player.Chatted:Connect(function(message)
+local keyword = ".loopkill gua"
+if string.sub(message, 1, #keyword) == keyword then
+
+  getgenv().killGua = true
+
+end
+end)
+
+-- تكرار قتل جميع مجرم لاعبين
+local player = game.Players.LocalPlayer
+local chattedConnection = player.Chatted:Connect(function(message)
+local keyword = ".loopkill cri"
+if string.sub(message, 1, #keyword) == keyword then
+
+  getgenv().killCri = true
+
+end
+end)
+
+
+-- تكرار سجن جميع لاعبين (طالعين او مخالفين) 
+local player = game.Players.LocalPlayer
+local chattedConnection = player.Chatted:Connect(function(message)
+local keyword = ".looparrest all"
+if string.sub(message, 1, #keyword) == keyword then
+
+  getgenv().arrestall = true
+
+end
+end)
+
+
+-- ايقاف قتل جميع لاعبين بل ماب 
+local player = game.Players.LocalPlayer
+local chattedConnection = player.Chatted:Connect(function(message)
+local keyword = ".unloopkill all"
+if string.sub(message, 1, #keyword) == keyword then
+
+  getgenv().Killall = false
+
+end
+end)
+
+-- ايقاف قتل جميع حرامي لاعبين
+local player = game.Players.LocalPlayer
+local chattedConnection = player.Chatted:Connect(function(message)
+local keyword = ".unloopkill inm"
+if string.sub(message, 1, #keyword) == keyword then
+
+  getgenv().killInm = false
+
+end
+end)
+
+-- ايقاف سجن جميع لاعبين (طالعين او مخالفين) 
+local player = game.Players.LocalPlayer
+local chattedConnection = player.Chatted:Connect(function(message)
+local keyword = ".unlooparrest all"
+if string.sub(message, 1, #keyword) == keyword then
+
+  getgenv().arrestall = false
+
+end
 end)
 
 -- ما تموت
@@ -340,12 +555,12 @@ local chattedConnection = player.Chatted:Connect(function(message)
 local keyword = ".godmode"
 if string.sub(message, 1, #keyword) == keyword then
 
-    local ohInstance1 = game.Players.LocalPlayer.Character.Humanoid
-    local ohNumber2 = -math.huge
-    
-    game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)    
+  local ohInstance1 = game.Players.LocalPlayer.Character.Humanoid
+  local ohNumber2 = -math.huge
+  
+  game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)    
 
-  end
+end
 end)
 
 
@@ -355,15 +570,15 @@ local chattedConnection = player.Chatted:Connect(function(message)
 local keyword = ".getalltools"
 if string.sub(message, 1, #keyword) == keyword then
 
-    fireclickdetector(workspace.Prison_ITEMS.giver["AK-47"].ClickDetector)
-    fireclickdetector(workspace.Prison_ITEMS.giver.FAL.ClickDetector)
-    fireclickdetector(workspace.Prison_ITEMS.giver.M9.ClickDetector)
-    fireclickdetector(workspace.Prison_ITEMS.giver.MP5.ClickDetector)
-    fireclickdetector(workspace.Prison_ITEMS.giver.MiniGun.ClickDetector)
-    fireclickdetector(workspace.Prison_ITEMS.giver["Remington 870"].ClickDetector)
-    
-    
-  end
+  fireclickdetector(workspace.Prison_ITEMS.giver["AK-47"].ClickDetector)
+  fireclickdetector(workspace.Prison_ITEMS.giver.FAL.ClickDetector)
+  fireclickdetector(workspace.Prison_ITEMS.giver.M9.ClickDetector)
+  fireclickdetector(workspace.Prison_ITEMS.giver.MP5.ClickDetector)
+  fireclickdetector(workspace.Prison_ITEMS.giver.MiniGun.ClickDetector)
+  fireclickdetector(workspace.Prison_ITEMS.giver["Remington 870"].ClickDetector)
+  
+  
+end
 end)
 
 -- رصاص لا محدود
@@ -374,10 +589,10 @@ if string.sub(message, 1, #keyword) == keyword then
 
 for _, infAmmos in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
 
-        infAmmos.Ammos.Value = math.huge
+      infAmmos.Ammos.Value = math.huge
 end
-    
-  end
+  
+end
 end)
 
 -- سجن جميع لاعبين ( مخالفين او طالعين برا سجن )
@@ -387,17 +602,17 @@ local keyword = ".arrest all"
 if string.sub(message, 1, #keyword) == keyword then
 
 
-    for i,v in pairs(game.Players:GetPlayers()) do
-        if v.Name ~= game.Players.LocalPlayer.Name then
-    
-    local ohInstance1 = v
-    
-    game:GetService("ReplicatedStorage").Arrest:InvokeServer(ohInstance1)
-    
-        end
-    end
-
+  for i,v in pairs(game.Players:GetPlayers()) do
+      if v.Name ~= game.Players.LocalPlayer.Name then
+  
+  local ohInstance1 = v
+  
+  game:GetService("ReplicatedStorage").Arrest:InvokeServer(ohInstance1)
+  
+      end
   end
+
+end
 end)
 
 -- حذف جميع ابواب
@@ -406,30 +621,30 @@ local chattedConnection = player.Chatted:Connect(function(message)
 local keyword = ".deldoor"
 if string.sub(message, 1, #keyword) == keyword then
 
-    local Doors = workspace.Doors:GetChildren()
+  local Doors = workspace.Doors:GetChildren()
 
-    if #Doors == 0 then
+  if #Doors == 0 then
 game.StarterGui:SetCore("SendNotification",  {
- Title = "انه محذوف بل فعل";
- Text = "by : 7yd7";
- Icon = "";
- Duration = 5;
- Callback = NotificationBindable;
+Title = "انه محذوف بل فعل";
+Text = "by : 7yd7";
+Icon = "";
+Duration = 5;
+Callback = NotificationBindable;
 })
-    else
-        game.StarterGui:SetCore("SendNotification",  {
-            Title = "تم حذف جميع ابواب";
-            Text = "by : 7yd7";
-            Icon = "";
-            Duration = 5;
-            Callback = NotificationBindable;
-           })
-      for _, Doors in pairs(Doors) do
-        Doors:Destroy()
-      end
+  else
+      game.StarterGui:SetCore("SendNotification",  {
+          Title = "تم حذف جميع ابواب";
+          Text = "by : 7yd7";
+          Icon = "";
+          Duration = 5;
+          Callback = NotificationBindable;
+         })
+    for _, Doors in pairs(Doors) do
+      Doors:Destroy()
     end
-    
   end
+  
+end
 end)
 
 
@@ -444,7 +659,7 @@ local ohBrickColor1 = BrickColor.new("Bright orange")
 
 game:GetService("ReplicatedStorage").HomeConfig.JoinTeam:FireServer(ohBrickColor1)
 
-  end
+end
 end)
 
 -- تيم شرطي
@@ -458,7 +673,7 @@ local ohBrickColor1 = BrickColor.new("Bright blue")
 
 game:GetService("ReplicatedStorage").HomeConfig.JoinTeam:FireServer(ohBrickColor1)
 
-  end
+end
 end)
 
 -- تيم مجرم
@@ -471,7 +686,7 @@ if string.sub(message, 1, #keyword) == keyword then
 local ohBrickColor1 = BrickColor.new("Really red")
 
 game:GetService("ReplicatedStorage").HomeConfig.JoinTeam:FireServer(ohBrickColor1)
-  end
+end
 end)
 
 
@@ -479,24 +694,109 @@ end)
 
 -- قتل من مسافه بعيد
 coroutine.wrap(function()
-  while wait() do
-    if getgenv().Kill_Aura then
-      for i, v in pairs(game.Players:GetPlayers()) do
-        if v ~= game.Players.LocalPlayer then
-          local Distance = (v.Character:FindFirstChildOfClass("Part").Position - game.Players.LocalPlayer.Character:FindFirstChildOfClass("Part").Position).magnitude
-          if Distance <= 10 then
-            for i = 1, 25 do
-              local ohInstance1 = v.Character.Humanoid
-              local ohNumber2 = 1000000000000
+while wait() do
+  if getgenv().Kill_Aura == true then
+    for i, v in pairs(game.Players:GetPlayers()) do
+      if v ~= game.Players.LocalPlayer then
+        local Distance = (v.Character:FindFirstChildOfClass("Part").Position - game.Players.LocalPlayer.Character:FindFirstChildOfClass("Part").Position).magnitude
+        if Distance <= 10 then
+          for i = 1, 25 do
+            local ohInstance1 = v.Character.Humanoid
+            local ohNumber2 = 1000000000000
 
-              game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)
-            end
+            if v.Character.Humanoid.Health > 0 then
+
+            game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)
           end
         end
       end
     end
   end
+end
+end
 end)()
+
+coroutine.wrap(function()
+  while wait(.5) do
+    if getgenv().Killall == true then
+      for i, v in pairs(game.Players:GetPlayers()) do
+        if v.Name ~= game.Players.LocalPlayer.Name then
+            local ohInstance1 = v.Character.Humanoid
+            local ohNumber2 = 1000000000000
+    
+            if v.Character.Humanoid.Health > 0 then
+                game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)
+            end
+        end
+    end
+    end
+  end
+  end)()
+
+  coroutine.wrap(function()
+    while wait(.5) do
+      if getgenv().killInm == true then
+        for i,v in pairs(game:GetService("Teams").Inmates:GetPlayers()) do
+          if v.Name ~= game.Players.LocalPlayer.Name then
+              local ohInstance1 = v.Character.Humanoid
+              local ohNumber2 = 1000000000000
+      
+              if v.Character.Humanoid.Health > 0 then
+                  game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)
+              end
+          end
+      end
+      end
+    end
+    end)()
+
+    coroutine.wrap(function()
+      while wait(.5) do
+        if getgenv().killGua == true then
+          for i,v in pairs(game:GetService("Teams").Guards:GetPlayers()) do
+            if v.Name ~= game.Players.LocalPlayer.Name then
+                local ohInstance1 = v.Character.Humanoid
+                local ohNumber2 = 1000000000000
+        
+                if v.Character.Humanoid.Health > 0 then
+                    game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)
+                end
+            end
+        end
+        end
+      end
+      end)()
+
+      coroutine.wrap(function()
+        while wait(.5) do
+          if getgenv().killCri == true then
+            for i,v in pairs(game:GetService("Teams").Criminals:GetPlayers()) do
+              if v.Name ~= game.Players.LocalPlayer.Name then
+                  local ohInstance1 = v.Character.Humanoid
+                  local ohNumber2 = 1000000000000
+          
+                  if v.Character.Humanoid.Health > 0 then
+                      game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)
+                  end
+              end
+          end
+          end
+        end
+        end)()
+
+        coroutine.wrap(function()
+          while wait(.5) do
+            if getgenv().arrestall == true then
+              for i,v in pairs(game.Players:GetPlayers()) do
+                if v.Name ~= game.Players.LocalPlayer.Name then     
+            local ohInstance1 = v
+            
+            game:GetService("ReplicatedStorage").Arrest:InvokeServer(ohInstance1)
+                end
+            end
+            end
+          end
+          end)()
 
 -- تاكيد تشغيل سكربت بشكل كامل
 
@@ -511,10 +811,10 @@ game.StarterGui:SetCore("SendNotification",  {
 wait(.3)
 
 game.StarterGui:SetCore("SendNotification",  {
-  Title = ".cmds";
-  Text = "اكتبه ب شات يطلع لك اوامر";
-  Icon = "";
-  Duration = 5;
-  Callback = NotificationBindable;
- })
+Title = ".cmds";
+Text = "اكتبه ب شات يطلع لك اوامر";
+Icon = "";
+Duration = 5;
+Callback = NotificationBindable;
+})
 
