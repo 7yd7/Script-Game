@@ -1,1 +1,150 @@
 
+-- تاكيد اذا لديك اغراض او لا
+local Backpack = game:GetService("Players").LocalPlayer.Backpack
+
+local count = 0
+
+for _, item in ipairs(Backpack:GetChildren()) do
+  count = count + 1
+end
+
+if count >= 8 then
+    game.StarterGui:SetCore("SendNotification",  {
+        Title = "يبدو لديك جميع اغراض قيم باس";
+        Text = "By : 7yd7";
+        Icon = "";
+        Duration = 5;
+        Callback = NotificationBindable;
+       })
+else
+-- قيم باس
+game:GetService("ReplicatedStorage").AnimeMagicalStaff:FireServer()
+game:GetService("ReplicatedStorage").SwordOfLight:FireServer()
+game:GetService("ReplicatedStorage").Rainbow:FireServer()
+game:GetService("ReplicatedStorage").SuperFlyGoldBoombox:FireServer()
+game:GetService("ReplicatedStorage").SpeedCoil:FireServer()
+game:GetService("ReplicatedStorage").Hoverboard:FireServer()
+game:GetService("ReplicatedStorage").GravityCoil:FireServer()
+game:GetService("ReplicatedStorage").FidgetSpinner:FireServer()
+game:GetService("ReplicatedStorage").BodySwapPotion:FireServer()
+-- رساله قيم باس
+game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم اخذ جميع الاغراض قيم باس";
+    Text = "(لما تطلع تدخل سوف يذهب قيم باس)";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+end
+
+
+-- تحقق ل فريق
+local Teams = game:GetService("Teams")
+local Player = game.Players.LocalPlayer
+
+local teamName = Player.Team.Name
+
+for i, tycoon in pairs(workspace.Tycoons["Zednov's Tycoon Kit [OPEN!]"].Tycoons:GetChildren()) do
+
+    if tycoon.Name == teamName then
+
+        game.StarterGui:SetCore("SendNotification",  {
+            Title = tycoon.Name;
+            Text = "By : 7yd7";
+            Icon = "";
+            Duration = 5;
+            Callback = NotificationBindable;
+           })
+wait(.1)
+
+local StarterGui = game:GetService("StarterGui")
+local bindable = Instance.new("BindableFunction")
+
+function bindable.OnInvoke(response)
+    if response == "نعم" then
+
+    getgenv().Giver = true
+
+local StarterGui = game:GetService("StarterGui")
+local bindable = Instance.new("BindableFunction")
+
+function bindable.OnInvoke(response)
+    if response == "نعم" then
+        local count = 0
+
+        while count < 20 do
+            getgenv().Giver = false
+            count = count + 1
+            wait(.2)
+        end        
+    end
+end
+
+StarterGui:SetCore("SendNotification", {
+    Title = "ايقاف اخذ فلوس تلقائيا",
+    Text = "by : 7yd7",
+    Duration = math.huge,
+    Callback = bindable,
+    Button1 = "ايقاف",
+})
+
+    elseif response == "لا" then
+
+    end
+end
+
+StarterGui:SetCore("SendNotification", {
+    Title = "اخذ فلوس تلقائيا",
+    Text = "by : 7yd7",
+    Duration = math.huge,
+    Callback = bindable,
+    Button1 = "نعم",
+    Button2 = "لا"
+})
+
+
+-- loop 
+
+-- تكرار اخذ فلوس تلقاءي
+coroutine.wrap(function()
+    while wait() do
+      if getgenv().Giver == true then
+
+ -- اخذ فلوس تلقاءي
+local PlayerHead = game.Players.LocalPlayer.Character.Head
+local giver = tycoon.Essentials.Giver
+
+firetouchinterest(PlayerHead, giver, 0)
+wait(.1)
+firetouchinterest(PlayerHead, giver, 1)
+
+
+     end
+   end
+end)()
+
+    return 
+end
+end
+
+-- لم يتم اخذ فريق
+local StarterGui = game:GetService("StarterGui")
+local bindable = Instance.new("BindableFunction")
+
+function bindable.OnInvoke(response)
+    if response == "اعاده تشغيل" then
+
+        print("yes chosen")
+    elseif response == "لا اريد" then
+
+    end
+end
+
+StarterGui:SetCore("SendNotification", {
+    Title = "يبدو انك لم تاخذ فريق قم اخذ فريق",
+    Text = "اعاده تشغيل سكربت",
+    Duration = 5,
+    Callback = bindable,
+    Button1 = "اعاده تشغيل",
+    Button2 = "لا اريد"
+})
