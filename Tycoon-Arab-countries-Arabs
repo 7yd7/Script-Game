@@ -142,7 +142,7 @@ end
 StarterGui:SetCore("SendNotification", {
     Title = "يبدو انك لم تاخذ فريق قم اخذ فريق",
     Text = "اعاده تشغيل سكربت",
-    Duration = 5,
+    Duration = math.huge,
     Callback = bindable,
     Button1 = "اعاده تشغيل",
     Button2 = "لا اريد"
