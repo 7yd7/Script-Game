@@ -1,4 +1,3 @@
-
 -- تاكيد اذا لديك اغراض او لا
 local Backpack = game:GetService("Players").LocalPlayer.Backpack
 
@@ -133,8 +132,8 @@ local bindable = Instance.new("BindableFunction")
 
 function bindable.OnInvoke(response)
     if response == "اعاده تشغيل" then
-
-        print("yes chosen")
+        local url = "\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\55\121\100\55\47\83\99\114\105\112\116\45\71\97\109\101\47\109\97\105\110\47/Tycoon-Arab-countries-Arabs"
+        loadstring(game:HttpGet(url))()
     elseif response == "لا اريد" then
 
     end
