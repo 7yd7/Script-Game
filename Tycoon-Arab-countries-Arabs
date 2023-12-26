@@ -68,7 +68,7 @@ local StarterGui = game:GetService("StarterGui")
 local bindable = Instance.new("BindableFunction")
 
 function bindable.OnInvoke(response)
-    if response == "نعم" then
+    if response == "ايقاف" then
         local count = 0
 
         while count < 20 do
