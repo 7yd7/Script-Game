@@ -239,7 +239,7 @@ sendSystemMessage()
 
   local function sendSystemMessage()
       game.StarterGui:SetCore("ChatMakeSystemMessage", {
-      Text = "[7yd7] : .godmode ما تموت"  ; 
+      Text = "[7yd7] : .god ما تموت"  ; 
           Font = Enum.Font; --font
           Color = Color3.new(252, 250, 255); -- الون شات حاليا لونه ابيض
           FontSize = Enum.FontSize.Size96 --size
