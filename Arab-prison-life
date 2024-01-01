@@ -467,6 +467,14 @@ if string.sub(message, 1, #keyword) == keyword then
 
   getgenv().Killall = true
 
+  game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم تشغيل قتل جميع لاعبين";
+    Text = "By : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+
 end
 end)
 
@@ -477,6 +485,14 @@ local keyword = ".loopkill inm"
 if string.sub(message, 1, #keyword) == keyword then
 
   getgenv().killInm = true
+
+  game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم تشغيل قتل جميع حرامي";
+    Text = "By : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
 
 end
 end)
@@ -489,6 +505,15 @@ if string.sub(message, 1, #keyword) == keyword then
 
   getgenv().killGua = true
 
+  game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم تشغيل قتل شرطي لاعبين";
+    Text = "By : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+
+
 end
 end)
 
@@ -499,6 +524,15 @@ local keyword = ".loopkill cri"
 if string.sub(message, 1, #keyword) == keyword then
 
   getgenv().killCri = true
+
+  game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم تشغيل قتل جميع مجرم";
+    Text = "By : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+
 
 end
 end)
@@ -512,6 +546,15 @@ if string.sub(message, 1, #keyword) == keyword then
 
   getgenv().arrestall = true
 
+  game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم سجن جميع لاعبين ( طالعين او مخالفين)";
+    Text = "By : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+
+
 end
 end)
 
@@ -524,6 +567,15 @@ if string.sub(message, 1, #keyword) == keyword then
 
   getgenv().Killall = false
 
+  game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم ايقاف قتل جميع لاعبين";
+    Text = "By : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+
+
 end
 end)
 
@@ -534,6 +586,53 @@ local keyword = ".unloopkill inm"
 if string.sub(message, 1, #keyword) == keyword then
 
   getgenv().killInm = false
+
+  game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم ايقاف قتل جميع حرامي";
+    Text = "By : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+
+end
+end)
+
+-- ايقاف قتل جميع شرطي لاعبين
+local player = game.Players.LocalPlayer
+local chattedConnection = player.Chatted:Connect(function(message)
+local keyword = ".unloopkill gua"
+if string.sub(message, 1, #keyword) == keyword then
+
+  getgenv().killGua = false
+
+  game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم ايقاف قتل جميع شرطي";
+    Text = "By : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+
+end
+end)
+
+-- ايقاف قتل جميع حرامي لاعبين
+local player = game.Players.LocalPlayer
+local chattedConnection = player.Chatted:Connect(function(message)
+local keyword = ".unloopkill cri"
+if string.sub(message, 1, #keyword) == keyword then
+
+  getgenv().killCri = false
+
+  game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم ايقاف قتل جميع حرامي";
+    Text = "By : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+
 
 end
 end)
@@ -546,19 +645,37 @@ if string.sub(message, 1, #keyword) == keyword then
 
   getgenv().arrestall = false
 
+  game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم ايقاف سجن جميع لاعبين";
+    Text = "By : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+
+
 end
 end)
 
 -- ما تموت
 local player = game.Players.LocalPlayer
 local chattedConnection = player.Chatted:Connect(function(message)
-local keyword = ".godmode"
+local keyword = ".god"
 if string.sub(message, 1, #keyword) == keyword then
 
   local ohInstance1 = game.Players.LocalPlayer.Character.Humanoid
   local ohNumber2 = -math.huge
   
   game:GetService("ReplicatedStorage").GunRemote.Tag:FireServer(ohInstance1, ohNumber2)    
+
+  game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم تفعيل god";
+    Text = "By : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+
 
 end
 end)
