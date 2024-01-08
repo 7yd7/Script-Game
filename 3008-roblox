@@ -178,7 +178,13 @@ if #player.Backpack:GetChildren("Tool") > 0 then  -- Check if there are tools in
         if not table.find(toolNames, toolName) then
             -- Add the tool name to the table
             toolNames[#toolNames + 1] = toolName
-            print(toolName)
+            
+local ohString1 = "Inventory_Consume"
+local ohTable2 = {
+	["Tool"] = toolName
+}
+
+workspace.GameObjects.Physical.Players.afwafwwgwe22.System.Action:InvokeServer(ohString1, ohTable2)
         end
     end
 end
@@ -274,7 +280,12 @@ if #player.Backpack:GetChildren("Tool") > 0 then  -- Check if there are tools in
         if not table.find(toolNames, toolName) then
             -- Add the tool name to the table
             toolNames[#toolNames + 1] = toolName
-            print(toolName)
+ local ohString1 = "Inventory_Consume"
+local ohTable2 = {
+	["Tool"] = toolName
+}
+
+workspace.GameObjects.Physical.Players.afwafwwgwe22.System.Action:InvokeServer(ohString1, ohTable2)
         end
     end
 end
