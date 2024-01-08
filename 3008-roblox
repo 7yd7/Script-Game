@@ -18,14 +18,30 @@ else
     -- يتم تشغيل سكربت !
 
     game.StarterGui:SetCore("SendNotification",  {
-      Title = "تم انشاء قائمه بل اعلى (انفتوري2 اذا امتلىْ مخزون قم بضغط علي)";
+      Title = "تم انشاء قائمه بل اعلى انفتوري2 اذا امتلىْ مخزون قم بضغط علي Y";
       Text = "By : 7yd7";
       Icon = "";
       Duration = 5;
       Callback = NotificationBindable;
      })
+wait(.3)
+     game.StarterGui:SetCore("SendNotification",  {
+      Title = "تم انشاء قائمه بل اعلى رمي جميع اغراض U";
+      Text = "By : 7yd7";
+      Icon = "";
+      Duration = 5;
+      Callback = NotificationBindable;
+     })
+wait(.3)
+     game.StarterGui:SetCore("SendNotification",  {
+      Title = "تم اخذ قيم باس الساعة الشخصية ";
+      Text = "(تطلع تدخل سوف تذهب)";
+      Icon = "";
+      Duration = 5;
+      Callback = NotificationBindable;
+     })
 
-   -- اضافه gui 
+   -- اضافه gui انفتوري2
 local player = game.Players.LocalPlayer
 local inventory = player.PlayerGui.MainGui.TopBar.Menus.Inventory
 
@@ -34,6 +50,26 @@ local function duplicate()
     clone.Name = "7yd7"
     clone.ImageColor3 = Color3.new(33,33,33)
 	  clone.PcControl.Text = "Y"
+    clone.Parent = inventory.Parent
+	  clone.Image = "rbxassetid://14659873948"
+	  clone.ImageRectSize = Vector2.new(295, 295)
+  	clone.ImageRectOffset = Vector2.new(8, 5)
+	  clone.Notification:Destroy()
+    return clone
+end
+
+local clone = duplicate()
+
+-- اضافه gui رمي جميع اغراض
+
+local player = game.Players.LocalPlayer
+local inventory = player.PlayerGui.MainGui.TopBar.Menus.Inventory
+
+local function duplicate()
+    local clone = inventory:Clone()
+    clone.Name = "Drops-all"
+    clone.ImageColor3 = Color3.new(33,33,33)
+	  clone.PcControl.Text = "U"
     clone.Parent = inventory.Parent
 	  clone.Image = "http://www.roblox.com/asset/?id=14916455401"
 	  clone.ImageRectSize = Vector2.new(295, 295)
@@ -46,7 +82,8 @@ local clone = duplicate()
 
 
 
--- ضغط علي gui
+
+-- ضغط علي gui انفتوري
 
 local player = game.Players.LocalPlayer
 local testGui = player.PlayerGui.MainGui.TopBar.Menus["7yd7"]
@@ -73,6 +110,28 @@ else
 for i = 1, 1000 do
 game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game:GetService("Players").LocalPlayer.Backpack
 end
+end
+--
+end)
+
+-- ضغط علي gui رمي جميع اغراض
+
+local player = game.Players.LocalPlayer
+local testGui = player.PlayerGui.MainGui.TopBar.Menus["Drops-all"]
+
+testGui.MouseButton1Click:Connect(function()
+-- سكربت رمي جميع اغراض
+local player = game.Players.LocalPlayer
+
+if #player.Backpack:GetChildren("Tool") > 0 then  
+    for _, tool in pairs(player.Backpack:GetChildren("Tool")) do
+        local ohString1 = "Inventory_DropAll"
+        local ohTable2 = {
+            ["Tool"] = tool.Name
+        }
+
+        workspace.GameObjects.Physical.Players.afwafwwgwe22.System.Action:InvokeServer(ohString1, ohTable2)
+    end
 end
 --
 end)
@@ -110,5 +169,51 @@ end
     end
 end)
 
+
+-- ضغط علي كيبورد حرف U
+
+local UserInputService = game:GetService("UserInputService")
+
+UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if gameProcessedEvent then return end
+
+    if input.KeyCode == Enum.KeyCode.U then
+-- سكربت رمي جميع اغراض
+local player = game.Players.LocalPlayer
+
+if #player.Backpack:GetChildren("Tool") > 0 then  
+    for _, tool in pairs(player.Backpack:GetChildren("Tool")) do
+        local ohString1 = "Inventory_DropAll"
+        local ohTable2 = {
+            ["Tool"] = tool.Name
+        }
+
+        workspace.GameObjects.Physical.Players.afwafwwgwe22.System.Action:InvokeServer(ohString1, ohTable2)
+    end
+end
+--
+    end
+  end)
+
+-- تفعيل loog
+
+-- الساعه ضخصيه
+getgenv().Gamepass_Clock = true
+
+-- سكربتات loop
+
+coroutine.wrap(function()
+  while wait(.5) do
+    if getgenv().Gamepass_Clock == true then
+
+-- فتح قاءمه ساعه
+game:GetService("Players").LocalPlayer.PlayerGui.MainGui.TopBar.Calendar.Gamepass_Clock.Visible = true
+
+-- نسخ الساعه
+game:GetService("Players").LocalPlayer.PlayerGui.MainGui.TopBar.Calendar.Gamepass_Clock.Text = game:GetService("ReplicatedStorage").ServerSettings.TimeSettings.TimeLeft.Value 
+
+    end
+  end
+  end)()
 
 end
