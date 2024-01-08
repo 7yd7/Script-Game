@@ -1,0 +1,114 @@
+local player = game.Players.LocalPlayer
+local menus = player.PlayerGui.MainGui.TopBar.Menus
+
+local Exists = menus:FindFirstChild("7yd7")
+
+if Exists then
+-- تم تشفغيل سكربت بل فعل !
+     game.StarterGui:SetCore("SendNotification",  {
+      Title = "يبدو انه سكربت مفعل بل فعل";
+      Text = "By : 7yd7";
+      Icon = "";
+      Duration = 5;
+      Callback = NotificationBindable;
+     })
+
+
+else
+    -- يتم تشغيل سكربت !
+
+    game.StarterGui:SetCore("SendNotification",  {
+      Title = "تم انشاء قائمه بل اعلى (انفتوري2 اذا امتلىْ مخزون قم بضغط علي)";
+      Text = "By : 7yd7";
+      Icon = "";
+      Duration = 5;
+      Callback = NotificationBindable;
+     })
+
+   -- اضافه gui 
+local player = game.Players.LocalPlayer
+local inventory = player.PlayerGui.MainGui.TopBar.Menus.Inventory
+
+local function duplicate()
+    local clone = inventory:Clone()
+    clone.Name = "7yd7"
+    clone.ImageColor3 = Color3.new(33,33,33)
+	  clone.PcControl.Text = "Y"
+    clone.Parent = inventory.Parent
+	  clone.Image = "http://www.roblox.com/asset/?id=14916455401"
+	  clone.ImageRectSize = Vector2.new(295, 295)
+  	clone.ImageRectOffset = Vector2.new(8, 5)
+	  clone.Notification:Destroy()
+    return clone
+end
+
+local clone = duplicate()
+
+
+
+-- ضغط علي gui
+
+local player = game.Players.LocalPlayer
+local testGui = player.PlayerGui.MainGui.TopBar.Menus["7yd7"]
+
+
+testGui.MouseButton1Click:Connect(function()
+-- سكربت انفتوري
+local Backpack = game:GetService("Players").LocalPlayer.Backpack
+local player = game.Players.LocalPlayer
+local starterGear = player.StarterGear
+
+local count = 0
+
+for _, item in ipairs(Backpack:GetChildren()) do
+  count = count + 1
+end
+
+if count >= 1 then
+for i = 1, count do
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+
+end
+else
+for i = 1, 1000 do
+game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game:GetService("Players").LocalPlayer.Backpack
+end
+end
+--
+end)
+
+-- ضغط علي كيبورد حرف V
+
+local UserInputService = game:GetService("UserInputService")
+
+UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if gameProcessedEvent then return end
+
+    if input.KeyCode == Enum.KeyCode.Y then
+-- سكربت انفتوري
+local Backpack = game:GetService("Players").LocalPlayer.Backpack
+local player = game.Players.LocalPlayer
+local starterGear = player.StarterGear
+
+local count = 0
+
+for _, item in ipairs(Backpack:GetChildren()) do
+  count = count + 1
+end
+
+if count >= 1 then
+for i = 1, count do
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+
+end
+else
+for i = 1, 1000 do
+game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game:GetService("Players").LocalPlayer.Backpack
+end
+end
+--
+    end
+end)
+
+
+end
