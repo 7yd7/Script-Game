@@ -80,7 +80,25 @@ end
 
 local clone = duplicate()
 
+-- اضافه gui اكل جميع اغراض وحده فقط
 
+local player = game.Players.LocalPlayer
+local inventory = player.PlayerGui.MainGui.TopBar.Menus.Inventory
+
+local function duplicate()
+    local clone = inventory:Clone()
+    clone.Name = "food-all"
+    clone.ImageColor3 = Color3.new(33,33,33)
+	  clone.PcControl.Text = "J"
+    clone.Parent = inventory.Parent
+	  clone.Image = "http://www.roblox.com/asset/?id=43149110"
+	  clone.ImageRectSize = Vector2.new(122, 120)
+  	clone.ImageRectOffset = Vector2.new(68, 80)
+	  clone.Notification:Destroy()
+    return clone
+end
+
+local clone = duplicate()
 
 
 -- ضغط علي gui انفتوري
@@ -133,6 +151,39 @@ if #player.Backpack:GetChildren("Tool") > 0 then
         workspace.GameObjects.Physical.Players.afwafwwgwe22.System.Action:InvokeServer(ohString1, ohTable2)
     end
 end
+--
+end)
+
+-- ضغط علي gui سكربت اكل جميع اغراض وحده فقط
+
+local player = game.Players.LocalPlayer
+local testGui = player.PlayerGui.MainGui.TopBar.Menus["food-all"]
+
+testGui.MouseButton1Click:Connect(function()
+-- سكربت اكل جميع اغراض وحده فقط
+local player = game.Players.LocalPlayer
+
+if #player.Backpack:GetChildren("Tool") > 0 then  -- Check if there are tools in Backpack
+    local toolNames = {}
+
+    for _, tool in pairs(player.Backpack:GetChildren("Tool")) do
+        -- Get the name of the tool
+        local toolName = tool.Name
+
+        -- تجنب اغراض شبه سيء
+        if toolName ~= "2 Litre Dr. Bob" and toolName ~= "Beans" then
+
+
+        -- Check if the tool name already exists in the table
+        if not table.find(toolNames, toolName) then
+            -- Add the tool name to the table
+            toolNames[#toolNames + 1] = toolName
+            print(toolName)
+        end
+    end
+end
+end
+
 --
 end)
 
@@ -191,6 +242,44 @@ if #player.Backpack:GetChildren("Tool") > 0 then
         workspace.GameObjects.Physical.Players.afwafwwgwe22.System.Action:InvokeServer(ohString1, ohTable2)
     end
 end
+--
+    end
+  end)
+
+
+
+  -- ضغط علي كيبورد حرف J
+
+local UserInputService = game:GetService("UserInputService")
+
+UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if gameProcessedEvent then return end
+
+    if input.KeyCode == Enum.KeyCode.J then
+-- سكربت اكل جميع اغراض وحده فقط
+local player = game.Players.LocalPlayer
+
+if #player.Backpack:GetChildren("Tool") > 0 then  -- Check if there are tools in Backpack
+    local toolNames = {}
+
+    for _, tool in pairs(player.Backpack:GetChildren("Tool")) do
+        -- Get the name of the tool
+        local toolName = tool.Name
+
+        -- تجنب اغراض شبه سيء
+        if toolName ~= "2 Litre Dr. Bob" and toolName ~= "Beans" then
+
+
+        -- Check if the tool name already exists in the table
+        if not table.find(toolNames, toolName) then
+            -- Add the tool name to the table
+            toolNames[#toolNames + 1] = toolName
+            print(toolName)
+        end
+    end
+end
+end
+
 --
     end
   end)
