@@ -24,7 +24,7 @@ else
       Duration = 5;
       Callback = NotificationBindable;
      })
-wait(.3)
+wait(.5)
      game.StarterGui:SetCore("SendNotification",  {
       Title = "تم انشاء قائمه بل اعلى رمي جميع اغراض U";
       Text = "By : 7yd7";
@@ -32,10 +32,18 @@ wait(.3)
       Duration = 5;
       Callback = NotificationBindable;
      })
-wait(.3)
+wait(.5)
      game.StarterGui:SetCore("SendNotification",  {
       Title = "تم اخذ قيم باس الساعة الشخصية ";
       Text = "(تطلع تدخل سوف تذهب)";
+      Icon = "";
+      Duration = 5;
+      Callback = NotificationBindable;
+     })
+wait(.5)
+     game.StarterGui:SetCore("SendNotification",  {
+      Title = "لا محدود Hunger Energy";
+      Text = "By : 7yd7";
       Icon = "";
       Duration = 5;
       Callback = NotificationBindable;
@@ -148,7 +156,7 @@ if #player.Backpack:GetChildren("Tool") > 0 then
             ["Tool"] = tool.Name
         }
 
-        workspace.GameObjects.Physical.Players.afwafwwgwe22.System.Action:InvokeServer(ohString1, ohTable2)
+        game.Players.LocalPlayer.Character.System.Action:InvokeServer(ohString1, ohTable2)
     end
 end
 --
@@ -184,7 +192,8 @@ local ohTable2 = {
 	["Tool"] = toolName
 }
 
-workspace.GameObjects.Physical.Players.afwafwwgwe22.System.Action:InvokeServer(ohString1, ohTable2)
+
+game.Players.LocalPlayer.Character.System.Action:InvokeServer(ohString1, ohTable2)
         end
     end
 end
@@ -245,7 +254,7 @@ if #player.Backpack:GetChildren("Tool") > 0 then
             ["Tool"] = tool.Name
         }
 
-        workspace.GameObjects.Physical.Players.afwafwwgwe22.System.Action:InvokeServer(ohString1, ohTable2)
+        game.Players.LocalPlayer.Character.System.Action:InvokeServer(ohString1, ohTable2)
     end
 end
 --
@@ -285,7 +294,7 @@ local ohTable2 = {
 	["Tool"] = toolName
 }
 
-workspace.GameObjects.Physical.Players.afwafwwgwe22.System.Action:InvokeServer(ohString1, ohTable2)
+game.Players.LocalPlayer.Character.System.Action:InvokeServer(ohString1, ohTable2)
         end
     end
 end
@@ -299,11 +308,13 @@ end
 
 -- الساعه ضخصيه
 getgenv().Gamepass_Clock = true
+-- Energy Hunger لا محدود
+getgenv().infEnergyHunger = true
 
 -- سكربتات loop
 
 coroutine.wrap(function()
-  while wait(.5) do
+  while wait() do
     if getgenv().Gamepass_Clock == true then
 
 -- فتح قاءمه ساعه
@@ -315,5 +326,37 @@ game:GetService("Players").LocalPlayer.PlayerGui.MainGui.TopBar.Calendar.Gamepas
     end
   end
   end)()
+
+
+
+  coroutine.wrap(function()
+    while wait() do
+      if getgenv().infEnergyHunger == true then
+
+ -- تشغيل Energy Hunger لا محدود اساس سكربت
+ local ohString1 = "DecreaseStat"
+ local ohTable2 = {
+     ["Stats"] = {
+     ["Energy"] = -math.huge,
+	 ["Hunger"] = -math.huge
+     }
+ }
+ 
+ game.Players.LocalPlayer.Character.System.Event:FireServer(ohString1, ohTable2)
+
+
+  
+  -- فتح قاءمه Energy Hunger لا محدود
+  game:GetService("Players").LocalPlayer.PlayerGui.MainGui.PlayerStats.Energy.InfiniteValue.Visible = true
+  game:GetService("Players").LocalPlayer.PlayerGui.MainGui.PlayerStats.Hunger.InfiniteValue.Visible = true
+
+  -- اغلاق قاءمه Energy Hunger ارقام
+  game:GetService("Players").LocalPlayer.PlayerGui.MainGui.PlayerStats.Energy.Value.Visible = false 
+  game:GetService("Players").LocalPlayer.PlayerGui.MainGui.PlayerStats.Hunger.Value.Visible = false 
+
+  
+      end
+    end
+    end)()
 
 end
