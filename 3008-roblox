@@ -108,6 +108,26 @@ end
 
 local clone = duplicate()
 
+-- اضافه gui اخذ Medkit تلقاءي
+
+local player = game.Players.LocalPlayer
+local inventory = player.PlayerGui.MainGui.TopBar.Menus.Inventory
+
+local function duplicate()
+    local clone = inventory:Clone()
+    clone.Name = "Auto-Medkit"
+    clone.ImageColor3 = Color3.new(33,33,33)
+	  clone.PcControl.Text = "X"
+    clone.Parent = inventory.Parent
+	  clone.Image = "http://www.roblox.com/asset/?id=7175405748"
+	  clone.ImageRectSize = Vector2.new(170, 170)
+  	clone.ImageRectOffset = Vector2.new(1, 10)
+	  clone.Notification:Destroy()
+    return clone
+end
+
+local clone = duplicate()
+
 
 -- ضغط علي gui انفتوري
 
@@ -202,6 +222,57 @@ end
 --
 end)
 
+-- ضغط علي gui اخذ او اكل اوتو Medkit تهيل
+
+local player = game.Players.LocalPlayer
+local testGui = player.PlayerGui.MainGui.TopBar.Menus["Auto-Medkit"]
+
+testGui.MouseButton1Click:Connect(function()
+-- سكربت اخذ Medkit لاعب
+local player = game:GetService("Players").LocalPlayer
+
+local function findMedkit()
+-- اسم تاكيد ل Medkit
+    for _, tool in pairs(player.Backpack:GetChildren()) do
+        if tool.Name == "Medkit" then
+            return true
+        end
+    end
+
+    return false
+end
+
+local hasMedkit = findMedkit()
+
+-- تاكد هيل لاعب اقل من 100 اذا لم يكن اقل من 100 لم يتم تفعيل
+if player.Character.Humanoid.Health < 100 then
+
+    if hasMedkit then
+
+-- تاكيد اذا يوجد اسم Medkit او لا
+        local ohString1 = "Inventory_Consume"
+        local ohTable2 = {
+            ["Tool"] = "Medkit"
+        }
+
+        game.Players.LocalPlayer.Character.System.Action:InvokeServer(ohString1, ohTable2)
+
+    else
+
+   -- اذا ليست له مع Medkit
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "يجب ان يكون لديك Medkit",
+            Text = "By: 7yd7",
+            Icon = "",
+            Duration = 5,
+            Callback = NotificationBindable;
+        })
+
+    end
+end
+--
+end)
+
 -- ضغط علي كيبورد حرف V
 
 local UserInputService = game:GetService("UserInputService")
@@ -261,7 +332,60 @@ end
     end
   end)
 
+-- ضغط علي كيبورد حرف X
 
+local UserInputService = game:GetService("UserInputService")
+
+UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if gameProcessedEvent then return end
+
+    if input.KeyCode == Enum.KeyCode.X then
+-- سكربت اخذ Medkit لاعب
+local player = game:GetService("Players").LocalPlayer
+
+local function findMedkit()
+-- اسم تاكيد ل Medkit
+    for _, tool in pairs(player.Backpack:GetChildren()) do
+        if tool.Name == "Medkit" then
+            return true
+        end
+    end
+
+    return false
+end
+
+local hasMedkit = findMedkit()
+
+-- تاكد هيل لاعب اقل من 100 اذا لم يكن اقل من 100 لم يتم تفعيل
+if player.Character.Humanoid.Health < 100 then
+
+    if hasMedkit then
+
+-- تاكيد اذا يوجد اسم Medkit او لا
+        local ohString1 = "Inventory_Consume"
+        local ohTable2 = {
+            ["Tool"] = "Medkit"
+        }
+
+        game.Players.LocalPlayer.Character.System.Action:InvokeServer(ohString1, ohTable2)
+
+    else
+
+   -- اذا ليست له مع Medkit
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "يجب ان يكون لديك Medkit",
+            Text = "By: 7yd7",
+            Icon = "",
+            Duration = 5,
+            Callback = NotificationBindable;
+        })
+
+    end
+end
+
+--
+    end
+  end)
 
   -- ضغط علي كيبورد حرف J
 
