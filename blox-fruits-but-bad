@@ -1,0 +1,75 @@
+
+-- تاكيد انه تم تفعيل سكربت
+local Doors = game:GetService("Players").LocalPlayer.PlayerGui.Screen.Frame.Levi:GetChildren()
+
+if #Doors == 0 then
+    game.StarterGui:SetCore("SendNotification",  {
+        Title = "انه سكربت مفعل بل فعل";
+        Text = "by : 7yd7";
+        Icon = "";
+        Duration = 5;
+        Callback = NotificationBindable;
+       })
+
+else
+-- الرسايل
+
+game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم اخذ سكربت وحش بحر";
+    Text = "by : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+
+
+   game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم اخذ سكربت سفينه";
+    Text = "by : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+
+
+-- قيم باس سفينه
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local function runScriptWhenPlayerClicksImage()
+-- سفينه
+
+game:GetService("ReplicatedStorage").PirateSpawn:FireServer()
+
+end
+
+local Image =  game:GetService("Players").LocalPlayer.PlayerGui.Screen.Frame.Pirate
+
+Image.MouseButton1Down:Connect(runScriptWhenPlayerClicksImage)
+
+
+
+
+-- قيم باس وحش بحر
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local function runScriptWhenPlayerClicksImage()
+-- وحش بحر
+
+workspace.leviremot:FireServer() 
+
+end
+
+local Image =  game:GetService("Players").LocalPlayer.PlayerGui.Screen.Frame.Levi
+
+Image.MouseButton1Down:Connect(runScriptWhenPlayerClicksImage)
+
+-- سكربتات
+
+-- حذف سكربت قيم باس سفينه
+game:GetService("Players").LocalPlayer.PlayerGui.Screen.Frame.Pirate.LocalScript:Destroy()
+-- حذف سكربت قيم باس وحش بحر
+game:GetService("Players").LocalPlayer.PlayerGui.Screen.Frame.Levi.LocalScript:Destroy()
+
+end
