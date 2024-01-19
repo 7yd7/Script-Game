@@ -85,7 +85,7 @@ game:GetService("Players").LocalPlayer.PlayerGui.Screen.Frame.Levi.LocalScript:D
 getgenv().infheart = true
 
 coroutine.wrap(function()
-    while wait(5) do
+    while wait(2) do
       if getgenv().infheart == true then
 
 -- هيل لا محدود
