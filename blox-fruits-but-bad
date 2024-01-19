@@ -31,6 +31,15 @@ game.StarterGui:SetCore("SendNotification",  {
     Callback = NotificationBindable;
    })
 
+   game.StarterGui:SetCore("SendNotification",  {
+    Title = "هيل لا محدود";
+    Text = "by : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+
+
 
 -- قيم باس سفينه
 local Players = game:GetService("Players")
@@ -71,5 +80,19 @@ Image.MouseButton1Down:Connect(runScriptWhenPlayerClicksImage)
 game:GetService("Players").LocalPlayer.PlayerGui.Screen.Frame.Pirate.LocalScript:Destroy()
 -- حذف سكربت قيم باس وحش بحر
 game:GetService("Players").LocalPlayer.PlayerGui.Screen.Frame.Levi.LocalScript:Destroy()
+
+-- سكربتات loop
+getgenv().infheart = true
+
+coroutine.wrap(function()
+    while wait(5) do
+      if getgenv().infheart == true then
+
+-- هيل لا محدود
+
+workspace.dough.hundo:FireServer()
+      end
+    end
+    end)()
 
 end
