@@ -1,0 +1,62 @@
+local StarterGui = game:GetService("StarterGui")
+local bindable = Instance.new("BindableFunction")
+
+function bindable.OnInvoke(response)
+    if response == "نعم" then
+        getgenv().Boosts = true
+        local StarterGui = game:GetService("StarterGui")
+        local bindable = Instance.new("BindableFunction")
+        
+        function bindable.OnInvoke(response)
+            if response == "ايقاف" then
+                getgenv().Boosts = false
+            end
+        end
+        
+        StarterGui:SetCore("SendNotification", {
+            Title = "ايقاف سكربت اخذ سرعه/الكفوف",
+            Text = "By : 7yd7",
+            Duration = math.huge,
+            Callback = bindable,
+            Button1 = "ايقاف",
+        })
+    elseif response == "لا" then
+
+    end
+end
+
+StarterGui:SetCore("SendNotification", {
+    Title = "تفعيل سكربت اخذ سرعه/الكفوف",
+    Text = "By : 7yd7",
+    Duration = math.huge,
+    Callback = bindable,
+    Button1 = "نعم",
+    Button2 = "لا"
+})
+
+
+-- سكربتات loop
+
+
+-- سكربت اخذ جواهر/بوست
+
+
+coroutine.wrap(function()
+    while wait(.5) do
+      if getgenv().Boosts == true then
+
+        for i, v in pairs(workspace.Boosts:GetChildren()) do
+            if not v:IsA("Script") then
+                local touchInterest = v:FindFirstChild("TouchInterest")
+                if touchInterest then
+                    v.CFrame = workspace.afwafwwgwe22.HumanoidRootPart.CFrame
+                    wait(1)
+                    v.CFrame = v.CFrame:Inverse() * workspace.afwafwwgwe22.HumanoidRootPart.CFrame
+                else
+                    v.CFrame = v.CFrame:Inverse() * workspace.afwafwwgwe22.HumanoidRootPart.CFrame
+                end
+            end
+        end
+      end
+    end
+    end)()
