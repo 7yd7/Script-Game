@@ -49,11 +49,11 @@ coroutine.wrap(function()
             if not v:IsA("Script") then
                 local touchInterest = v:FindFirstChild("TouchInterest")
                 if touchInterest then
-                    v.CFrame = workspace.afwafwwgwe22.HumanoidRootPart.CFrame
+                    v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                     wait(1)
-                    v.CFrame = v.CFrame:Inverse() * workspace.afwafwwgwe22.HumanoidRootPart.CFrame
+                    v.CFrame = v.CFrame:Inverse() * game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                 else
-                    v.CFrame = v.CFrame:Inverse() * workspace.afwafwwgwe22.HumanoidRootPart.CFrame
+                    v.CFrame = v.CFrame:Inverse() * game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                 end
             end
         end
