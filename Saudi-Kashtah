@@ -130,16 +130,19 @@ game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end)
 
 Section:NewButton("leaderstats Riyal (لا يعمل حاليا)", "", function()
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
+--}
+--    local Players = game:GetService("Players")
+-- local LocalPlayer = Players.LocalPlayer
 
-for _, player in ipairs(Players:GetPlayers()) do
-    if player ~= LocalPlayer then
-        if player:FindFirstChild("SavingData") and player.SavingData:FindFirstChild("Riyal") then
-            player.SavingData.Riyal.Parent = player.leaderstats
-        end
-    end
-end
+-- for _, player in ipairs(Players:GetPlayers()) do
+--    if player ~= LocalPlayer then
+--        if player:FindFirstChild("SavingData") and player.SavingData:FindFirstChild("Riyal") then
+--            player.SavingData.Riyal.Parent = player.leaderstats
+--        end
+--    end
+
+
+-- end
 end)
 
 Section:NewToggle("Take money", "", function(state)
@@ -250,8 +253,6 @@ game:GetService("ReplicatedStorage").WeaponsSystem.Network.WeaponHit:FireServer(
 end
 end)
 
-
-
 local Section = pTab:NewSection("Control players")
 
 
@@ -311,6 +312,30 @@ end
     end
 end)
 
+local Section = pTab:NewSection("GiveMoney")
+
+Section:NewTextBox("GiveMoney all", "", function(txt)
+    for i, v in pairs(game.Players:GetPlayers()) do
+        if v.Name ~= game.Players.LocalPlayer.Name then
+            local ohString1 = v
+            local ohInstance2 = txt:gsub('"', "")
+
+            game:GetService("ReplicatedStorage").GiveMoney:FireServer(ohString1, tonumber(ohInstance2))
+        end
+    end
+end)
+
+
+Section:NewButton("Whistling all", "ButtonInfo", function()
+    for i, v in pairs(game.Players:GetPlayers()) do
+        if v.Name ~= game.Players.LocalPlayer.Name then
+            local ohString1 = v
+            local ohInstance2 = -v.SavingData.Riyal.Value
+
+            game:GetService("ReplicatedStorage").GiveMoney:FireServer(ohString1, tonumber(ohInstance2))
+        end
+    end
+end)
 
 local Section = mTab:NewSection("Car")
 
