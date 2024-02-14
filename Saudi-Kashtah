@@ -211,6 +211,51 @@ end
     end
 end)
 
+Section:NewToggle("Auto Cuff (New)", "", function(state)
+    if state then
+        getgenv().ToJail = true 
+        repeat wait (0)
+
+            local Players = game:GetService("Players")
+            local player = Players.LocalPlayer
+            local distanceThreshold = 5
+            
+            
+            local function checkDistance(otherPlayer)
+                local otherCharacter = workspace:FindFirstChild(otherPlayer.Name)
+                if otherCharacter then
+                    local playerPosition = player.Character.HumanoidRootPart.Position
+                    local otherPosition = otherCharacter.HumanoidRootPart.Position
+                    local distance = (playerPosition - otherPosition).Magnitude
+                    if distance <= distanceThreshold then
+            
+            local ohInstance1 = workspace:FindFirstChild(otherCharacter.Name)
+            
+            game:GetService("ReplicatedStorage").CuffRemote:InvokeServer(ohInstance1)
+                    end
+                end
+            end
+            
+            
+            for _, otherPlayer in ipairs(Players:GetPlayers()) do
+                if otherPlayer ~= player then
+                    checkDistance(otherPlayer)
+                end
+            end
+            
+            
+            Players.PlayerAdded:Connect(function(otherPlayer)
+                if otherPlayer ~= player then
+                    checkDistance(otherPlayer)
+                end
+            end)
+
+        until getgenv().ToJail == false
+    else
+        getgenv().ToJail = false
+    end
+end)
+
 local Section = pTab:NewSection("Kill")
 
 
