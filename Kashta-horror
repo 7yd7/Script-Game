@@ -1,0 +1,21 @@
+game.StarterGui:SetCore("SendNotification",  {
+    Title = "تم حصول قيم باس حياة لانهائية";
+    Text = "By : 7yd7";
+    Icon = "";
+    Duration = 5;
+    Callback = NotificationBindable;
+   })
+
+
+
+-- رجوه ل حياه مجددا gui ضغط علي
+
+local player = game.Players.LocalPlayer
+local testGui = player.PlayerGui.ScreenGui.Died.continue
+
+testGui.MouseButton1Click:Connect(function()
+-- رجوع ل حياه مجددا
+
+game:GetService("ReplicatedStorage").reviveEvent:FireServer()
+--
+end)
