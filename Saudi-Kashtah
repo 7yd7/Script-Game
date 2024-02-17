@@ -529,6 +529,26 @@ fireproximityprompt(workspace.Bank.DrillCellDoor6.Drill.PromptPart.PromptAttachm
     end
 end)
 
+local Section = mTab:NewSection("tool")
+
+
+Section:NewButton("Khaled VFX 2", "", function()
+    local tool = Instance.new("Tool")
+    tool.Name = "Khaled VFX 2"
+    
+    game:GetService("UserInputService").InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            if tool:IsDescendantOf(game.Players.LocalPlayer.Character) then
+    
+    game:GetService("ReplicatedStorage").HollowPurpleEvent_Khaled_VFX_2:FireServer()
+            end
+        end
+    end)
+    
+    tool.Parent = game.Players.LocalPlayer.Backpack
+    end)
+    
+
 local Section = tTab:NewSection("Teleport")
 
 Section:NewButton("Spawn", "", function()
